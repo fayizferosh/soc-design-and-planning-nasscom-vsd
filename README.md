@@ -146,3 +146,56 @@ Comments
 * Static Timing Analysis (STA) to verify that the design runs at the designated clock frequency.
 
 ![image](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/d8bc72cd-2fe9-4ae2-9431-68a6fa77c671)
+
+### Implementation
+
+* Day 1 task is to run 'picorv32a' design synthesis using OpenLANE flow and generate necessary outputs and also calculate the flop ratio.
+```math
+Flop Ratio = \frac{Number of D Flip Flops}{Total Number of Cells}
+```
+```math
+Percentage of DFF's = Flop Ratio * 100
+```
+
+Commands to invoke the OpenLANE flow and perform synthesis
+
+```bash
+# Change directory to openlane flow directory
+cd Desktop/work/tools/openlane_working_dir/openlane
+
+# alias docker='docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) efabless/openlane:v0.21'
+# Since we have aliased the long command to 'docker' we can invoke the OpenLANE flow docker sub-system by just running this command
+docker
+
+# Now that we have entered the OpenLANE flow contained docker sub-system we can invoke the OpenLANE flow in the Interactive mode using the following command
+./flow.tcl -interactive
+
+# Now that OpenLANE flow is open we have to input the required packages for proper functionality of the OpenLANE flow
+package require openlane 0.9
+
+# Now the OpenLANE flow is ready to run any design and initially we have to prep the design creating some necessary files and directories for running a specific design which in our case is 'picorv32a'
+prep -design picorv32a
+
+# Now that the design is prepped and ready, we can run synthesis using following command
+run_synthesis 
+```
+
+Screenshots of running each commands
+
+![1](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/d19f6d0f-16f8-4e79-aa5a-f2a34b9fb203)
+![2](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/5e03c8ca-8c7f-4579-a7bc-10161007910e)
+![3](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/5f196a31-059e-4192-a208-8a15ba1a0dd7)
+
+Screenshots of synthesis statistics report file with required values highlighted
+
+![Screenshot from 2024-03-15 22-02-42](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/9280fefc-80b2-44ef-af34-ef3bddd3c14e)
+![Screenshot from 2024-03-15 22-03-39](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/3275f46c-19d7-42c5-8984-96d455f6e09b)
+
+Calculation of Flop Ratio and DFF % from synthesis statistics report file
+
+```math
+Flop Ratio = \frac{1613}{14876} = 0.108429685
+```
+```math
+Percentage of DFF's = 0.108429685 * 100 = 10.84296854
+```
