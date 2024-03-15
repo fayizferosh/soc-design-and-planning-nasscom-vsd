@@ -177,7 +177,13 @@ package require openlane 0.9
 prep -design picorv32a
 
 # Now that the design is prepped and ready, we can run synthesis using following command
-run_synthesis 
+run_synthesis
+
+# Exit from OpenLANE flow
+exit
+
+# Exit from OpenLANE flow docker sub-system
+exit
 ```
 
 Screenshots of running each commands
