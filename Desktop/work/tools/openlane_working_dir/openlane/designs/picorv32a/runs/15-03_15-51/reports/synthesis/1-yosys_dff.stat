@@ -1,0 +1,27 @@
+
+20. Printing statistics.
+
+=== picorv32a ===
+
+   Number of wires:              22926
+   Number of wire bits:          25811
+   Number of public wires:         162
+   Number of public wire bits:    1972
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:              18036
+     $_ANDNOT_                    4010
+     $_AND_                       1159
+     $_MUX_                       1664
+     $_NAND_                       896
+     $_NOR_                        560
+     $_NOT_                        977
+     $_ORNOT_                      244
+     $_OR_                        2391
+     $_XNOR_                       615
+     $_XOR_                       2462
+     sky130_fd_sc_hd__dfxtp_2     1613
+     sky130_fd_sc_hd__mux2_1      1224
+     sky130_fd_sc_hd__mux4_1       221
+
