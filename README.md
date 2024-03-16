@@ -205,3 +205,35 @@ Flop Ratio = \frac{1613}{14876} = 0.108429685
 ```math
 Percentage of DFF's = 0.108429685 * 100 = 10.84296854
 ```
+
+## Day 2 - Good floorplan vs bad floorplan and introduction to library cells (15/03/2024)
+
+### Theory
+
+### Implementation
+
+* Day 2 task is to
+
+## Day 3 -  (16/03/2024)
+
+### Theory
+
+### Implementation
+
+* Day 3 task is to
+
+## Day 4 -  (17/03/2024)
+
+### Theory
+
+### Implementation
+
+* Day 4 task is to
+
+## Day 5 -  (18/03/2024)
+
+### Theory
+
+### Implementation
+
+* Day 5 task is to
