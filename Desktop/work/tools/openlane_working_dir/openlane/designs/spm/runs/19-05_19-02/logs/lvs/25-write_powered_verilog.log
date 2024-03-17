@@ -1,0 +1,19 @@
+Notice 0: Reading LEF file:  /openLANE_flow/designs/spm/runs/19-05_19-02/tmp/merged.lef
+Notice 0:     Created 13 technology layers
+Notice 0:     Created 25 technology vias
+Notice 0:     Created 440 library cells
+Notice 0: Finished LEF file:  /openLANE_flow/designs/spm/runs/19-05_19-02/tmp/merged.lef
+Notice 0: 
+Reading DEF file: /openLANE_flow/designs/spm/runs/19-05_19-02/results/routing/spm.def
+Notice 0: Design: spm
+Notice 0:     Created 46 pins.
+Notice 0:     Created 1048 components and 5101 component-terminals.
+Notice 0:     Created 2 special nets and 0 connections.
+Notice 0:     Created 362 nets and 1097 connections.
+Notice 0: Finished DEF file: /openLANE_flow/designs/spm/runs/19-05_19-02/results/routing/spm.def
+Top-level design name: spm
+Default power net:  VPWR
+Default ground net: VGND
+Found a total of 1 power ports.
+Found a total of 1 ground ports.
+Modified power connections of 1048 cells (Remaining: 0 ).

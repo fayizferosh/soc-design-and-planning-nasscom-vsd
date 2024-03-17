@@ -1,0 +1,6 @@
+Using Techfile: /home/kunalg123/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/klayout/sky130A.lyt
+Using layout file: /openLANE_flow/designs/spm/runs/29-06_07-34/results/floorplan/spm.floorplan.def
+[INFO] Reading tech file: /home/kunalg123/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/klayout/sky130A.lyt
+[INFO] Reading Layout file: /openLANE_flow/designs/spm/runs/29-06_07-34/results/floorplan/spm.floorplan.def
+[INFO] Writing out PNG screenshot '/openLANE_flow/designs/spm/runs/29-06_07-34/results/floorplan/spm.floorplan.def.png'
+Done

@@ -1,0 +1,110 @@
+
+Magic 8.3 revision 179 - Compiled on Tue Jun 15 07:12:53 UTC 2021.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+Using NULL graphics device.
+Processing system .magicrc file
+Sourcing design .magicrc for technology sky130A ...
+2 Magic internal units = 1 Lambda
+Input style sky130(): scaleFactor=2, multiplier=2
+Scaled tech values by 2 / 1 to match internal grid scaling
+Loading sky130A Device Generator Menu ...
+Loading "/openLANE_flow/scripts/magic/lef.tcl" from command line.
+Reading LEF data from file /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd.tlef.
+This action cannot be undone.
+LEF read, Line 77 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 78 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 110 (Message): Unknown keyword "MINENCLOSEDAREA" in LEF file; ignoring.
+LEF read, Line 112 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 113 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 119 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 120 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 121 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 153 (Message): Unknown keyword "MINENCLOSEDAREA" in LEF file; ignoring.
+LEF read, Line 161 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 162 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 164 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 165 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 166 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 202 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 203 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 205 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 206 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 207 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 243 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 244 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 246 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 247 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 248 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 284 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 285 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read: Processed 791 lines.
+spm: 10000 rects
+[INFO]: Writing abstract LEF
+Generating LEF output /openLANE_flow/designs/spm/runs/19-05_19-02/results/magic/spm.lef for cell spm:
+Diagnostic:  Write LEF header for cell spm
+Diagnostic:  Writing LEF output for cell spm
+Warning:  Parent cell lists instance of "sky130_fd_sc_hd__fill_2" at bad file path /openLANE_flow/designs/spm/runs/19-05_19-02/results/magic/sky130_fd_sc_hd__fill_2.mag.
+The cell exists in the search paths at /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref/sky130_fd_sc_hd/maglef/sky130_fd_sc_hd__fill_2.mag.
+The discovered version will be used.
+Warning:  Parent cell lists instance of "sky130_fd_sc_hd__decap_3" at bad file path /openLANE_flow/designs/spm/runs/19-05_19-02/results/magic/sky130_fd_sc_hd__decap_3.mag.
+The cell exists in the search paths at /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref/sky130_fd_sc_hd/maglef/sky130_fd_sc_hd__decap_3.mag.
+The discovered version will be used.
+Warning:  Parent cell lists instance of "sky130_fd_sc_hd__decap_8" at bad file path /openLANE_flow/designs/spm/runs/19-05_19-02/results/magic/sky130_fd_sc_hd__decap_8.mag.
+The cell exists in the search paths at /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref/sky130_fd_sc_hd/maglef/sky130_fd_sc_hd__decap_8.mag.
+The discovered version will be used.
+Warning:  Parent cell lists instance of "sky130_fd_sc_hd__decap_4" at bad file path /openLANE_flow/designs/spm/runs/19-05_19-02/results/magic/sky130_fd_sc_hd__decap_4.mag.
+The cell exists in the search paths at /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref/sky130_fd_sc_hd/maglef/sky130_fd_sc_hd__decap_4.mag.
+The discovered version will be used.
+Warning:  Parent cell lists instance of "sky130_fd_sc_hd__clkbuf_1" at bad file path /openLANE_flow/designs/spm/runs/19-05_19-02/results/magic/sky130_fd_sc_hd__clkbuf_1.mag.
+The cell exists in the search paths at /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref/sky130_fd_sc_hd/maglef/sky130_fd_sc_hd__clkbuf_1.mag.
+The discovered version will be used.
+Warning:  Parent cell lists instance of "sky130_fd_sc_hd__a22o_1" at bad file path /openLANE_flow/designs/spm/runs/19-05_19-02/results/magic/sky130_fd_sc_hd__a22o_1.mag.
+The cell exists in the search paths at /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref/sky130_fd_sc_hd/maglef/sky130_fd_sc_hd__a22o_1.mag.
+The discovered version will be used.
+Warning:  Parent cell lists instance of "sky130_fd_sc_hd__fill_1" at bad file path /openLANE_flow/designs/spm/runs/19-05_19-02/results/magic/sky130_fd_sc_hd__fill_1.mag.
+The cell exists in the search paths at /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref/sky130_fd_sc_hd/maglef/sky130_fd_sc_hd__fill_1.mag.
+The discovered version will be used.
+Warning:  Parent cell lists instance of "sky130_fd_sc_hd__tapvpwrvgnd_1" at bad file path /openLANE_flow/designs/spm/runs/19-05_19-02/results/magic/sky130_fd_sc_hd__tapvpwrvgnd_1.mag.
+The cell exists in the search paths at /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref/sky130_fd_sc_hd/maglef/sky130_fd_sc_hd__tapvpwrvgnd_1.mag.
+The discovered version will be used.
+Warning:  Parent cell lists instance of "sky130_fd_sc_hd__o2bb2a_1" at bad file path /openLANE_flow/designs/spm/runs/19-05_19-02/results/magic/sky130_fd_sc_hd__o2bb2a_1.mag.
+The cell exists in the search paths at /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref/sky130_fd_sc_hd/maglef/sky130_fd_sc_hd__o2bb2a_1.mag.
+The discovered version will be used.
+Warning:  Parent cell lists instance of "sky130_fd_sc_hd__and2_1" at bad file path /openLANE_flow/designs/spm/runs/19-05_19-02/results/magic/sky130_fd_sc_hd__and2_1.mag.
+The cell exists in the search paths at /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref/sky130_fd_sc_hd/maglef/sky130_fd_sc_hd__and2_1.mag.
+The discovered version will be used.
+Warning:  Parent cell lists instance of "sky130_fd_sc_hd__clkbuf_2" at bad file path /openLANE_flow/designs/spm/runs/19-05_19-02/results/magic/sky130_fd_sc_hd__clkbuf_2.mag.
+The cell exists in the search paths at /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref/sky130_fd_sc_hd/maglef/sky130_fd_sc_hd__clkbuf_2.mag.
+The discovered version will be used.
+Warning:  Parent cell lists instance of "sky130_fd_sc_hd__decap_6" at bad file path /openLANE_flow/designs/spm/runs/19-05_19-02/results/magic/sky130_fd_sc_hd__decap_6.mag.
+The cell exists in the search paths at /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref/sky130_fd_sc_hd/maglef/sky130_fd_sc_hd__decap_6.mag.
+The discovered version will be used.
+Warning:  Parent cell lists instance of "sky130_fd_sc_hd__inv_2" at bad file path /openLANE_flow/designs/spm/runs/19-05_19-02/results/magic/sky130_fd_sc_hd__inv_2.mag.
+The cell exists in the search paths at /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref/sky130_fd_sc_hd/maglef/sky130_fd_sc_hd__inv_2.mag.
+The discovered version will be used.
+Warning:  Parent cell lists instance of "sky130_fd_sc_hd__a21oi_2" at bad file path /openLANE_flow/designs/spm/runs/19-05_19-02/results/magic/sky130_fd_sc_hd__a21oi_2.mag.
+The cell exists in the search paths at /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref/sky130_fd_sc_hd/maglef/sky130_fd_sc_hd__a21oi_2.mag.
+The discovered version will be used.
+Warning:  Parent cell lists instance of "sky130_fd_sc_hd__dfrtp_1" at bad file path /openLANE_flow/designs/spm/runs/19-05_19-02/results/magic/sky130_fd_sc_hd__dfrtp_1.mag.
+The cell exists in the search paths at /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref/sky130_fd_sc_hd/maglef/sky130_fd_sc_hd__dfrtp_1.mag.
+The discovered version will be used.
+Warning:  Parent cell lists instance of "sky130_fd_sc_hd__a31oi_1" at bad file path /openLANE_flow/designs/spm/runs/19-05_19-02/results/magic/sky130_fd_sc_hd__a31oi_1.mag.
+The cell exists in the search paths at /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref/sky130_fd_sc_hd/maglef/sky130_fd_sc_hd__a31oi_1.mag.
+The discovered version will be used.
+Warning:  Parent cell lists instance of "sky130_fd_sc_hd__decap_12" at bad file path /openLANE_flow/designs/spm/runs/19-05_19-02/results/magic/sky130_fd_sc_hd__decap_12.mag.
+The cell exists in the search paths at /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref/sky130_fd_sc_hd/maglef/sky130_fd_sc_hd__decap_12.mag.
+The discovered version will be used.
+Warning:  Parent cell lists instance of "sky130_fd_sc_hd__buf_1" at bad file path /openLANE_flow/designs/spm/runs/19-05_19-02/results/magic/sky130_fd_sc_hd__buf_1.mag.
+The cell exists in the search paths at /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref/sky130_fd_sc_hd/maglef/sky130_fd_sc_hd__buf_1.mag.
+The discovered version will be used.
+Warning:  Parent cell lists instance of "sky130_fd_sc_hd__clkbuf_16" at bad file path /openLANE_flow/designs/spm/runs/19-05_19-02/results/magic/sky130_fd_sc_hd__clkbuf_16.mag.
+The cell exists in the search paths at /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref/sky130_fd_sc_hd/maglef/sky130_fd_sc_hd__clkbuf_16.mag.
+The discovered version will be used.
+Warning:  Parent cell lists instance of "sky130_fd_sc_hd__dlymetal6s2s_1" at bad file path /openLANE_flow/designs/spm/runs/19-05_19-02/results/magic/sky130_fd_sc_hd__dlymetal6s2s_1.mag.
+The cell exists in the search paths at /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref/sky130_fd_sc_hd/maglef/sky130_fd_sc_hd__dlymetal6s2s_1.mag.
+The discovered version will be used.
+Diagnostic:  Scale value is 0.005000
+Processing timestamp mismatches: sky130_fd_sc_hd__dlymetal6s2s_1, sky130_fd_sc_hd__clkbuf_16, sky130_fd_sc_hd__buf_1, sky130_fd_sc_hd__decap_12, sky130_fd_sc_hd__a31oi_1, sky130_fd_sc_hd__dfrtp_1, sky130_fd_sc_hd__a21oi_2, sky130_fd_sc_hd__inv_2, sky130_fd_sc_hd__decap_6, sky130_fd_sc_hd__clkbuf_2, sky130_fd_sc_hd__and2_1, sky130_fd_sc_hd__o2bb2a_1, sky130_fd_sc_hd__tapvpwrvgnd_1, sky130_fd_sc_hd__fill_1, sky130_fd_sc_hd__a22o_1, sky130_fd_sc_hd__clkbuf_1, sky130_fd_sc_hd__decap_4, sky130_fd_sc_hd__decap_8, sky130_fd_sc_hd__decap_3, sky130_fd_sc_hd__fill_2.
+[INFO]: LEF Write Complete
+Using technology "sky130A", version 1.0.141-0-gb9ffc1f

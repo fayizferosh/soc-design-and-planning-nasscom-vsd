@@ -1,0 +1,1 @@
+lvs {/openLANE_flow/designs/spm/runs/19-05_19-02/results/magic/spm.spice spm} {/openLANE_flow/designs/spm/runs/19-05_19-02/results/lvs/spm.lvs.powered.v spm} /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/netgen/sky130A_setup.tcl /openLANE_flow/designs/spm/runs/19-05_19-02/results/lvs/spm.lvs.lef.log -json

@@ -1,0 +1,213 @@
+CVC: Log output to /openLANE_flow/designs/spm/runs/19-05_19-02/results/cvc/cvc_spm.log
+CVC: Error output to /openLANE_flow/designs/spm/runs/19-05_19-02/results/cvc/cvc_spm.error.gz
+CVC: Debug output to /openLANE_flow/designs/spm/runs/19-05_19-02/results/cvc/cvc_spm.debug.gz
+CVC: Circuit Validation Check  Version 1.0.0
+CVC: Start: Fri May 19 19:08:22 2023
+
+Using the following parameters for CVC (Circuit Validation Check) from /openLANE_flow/scripts/cvc/sky130A/cvcrc.sky130A
+CVC_TOP = 'spm'
+CVC_NETLIST = '/openLANE_flow/designs/spm/runs/19-05_19-02/results/cvc/spm.cdl'
+CVC_MODE = 'spm'
+CVC_MODEL_FILE = '/openLANE_flow/scripts/cvc/sky130A/cvc.sky130A.models'
+CVC_POWER_FILE = '/openLANE_flow/designs/spm/runs/19-05_19-02/results/cvc/spm.power'
+CVC_FUSE_FILE = ''
+CVC_REPORT_FILE = '/openLANE_flow/designs/spm/runs/19-05_19-02/results/cvc/cvc_spm.log'
+CVC_REPORT_TITLE = 'CVC $CVC_TOP'
+CVC_CIRCUIT_ERROR_LIMIT = '100'
+CVC_SEARCH_LIMIT = '100'
+CVC_LEAK_LIMIT = '0.0002'
+CVC_SOI = 'false'
+CVC_SCRC = 'false'
+CVC_VTH_GATES = 'false'
+CVC_MIN_VTH_GATES = 'false'
+CVC_IGNORE_VTH_FLOATING = 'false'
+CVC_IGNORE_NO_LEAK_FLOATING = 'false'
+CVC_LEAK_OVERVOLTAGE = 'true'
+CVC_LOGIC_DIODES = 'false'
+CVC_ANALOG_GATES = 'true'
+CVC_BACKUP_RESULTS = 'false'
+CVC_MOS_DIODE_ERROR_THRESHOLD = '0'
+CVC_SHORT_ERROR_THRESHOLD = '0'
+CVC_BIAS_ERROR_THRESHOLD = '0'
+CVC_FORWARD_ERROR_THRESHOLD = '0'
+CVC_FLOATING_ERROR_THRESHOLD = '0'
+CVC_GATE_ERROR_THRESHOLD = '0'
+CVC_LEAK?_ERROR_THRESHOLD = '0'
+CVC_EXPECTED_ERROR_THRESHOLD = '0'
+CVC_OVERVOLTAGE_ERROR_THRESHOLD = '0'
+CVC_PARALLEL_CIRCUIT_PORT_LIMIT = '0'
+CVC_CELL_ERROR_LIMIT_FILE = ''
+CVC_CELL_CHECKSUM_FILE = ''
+CVC_LARGE_CIRCUIT_SIZE = '10000000'
+CVC_NET_CHECK_FILE = ''
+End of parameters
+
+CVC: Reading device model settings...
+CVC: Reading power settings...
+CVC: Parsing netlist /openLANE_flow/designs/spm/runs/19-05_19-02/results/cvc/spm.cdl
+Cdl fixed data size 30804
+Usage CDL: Time: 0  Memory: 7220  I/O: 424  Swap: 0
+CVC: Counting and linking...
+CVC: Assigning IDs ...
+Usage DB: Time: 0  Memory: 7476  I/O: 424  Swap: 0
+CVC: 1049(1049) instances, 1836(1836) nets, 4582(4582) devices.
+CVC: Setting models ...
+Setting model tolerances...
+CVC: Shorting switches...
+	Shorted 0 short
+Setting instance power...
+
+ModelList> filename /openLANE_flow/scripts/cvc/sky130A/cvc.sky130A.models
+ Model> nfet_01v8       2291 M->nmos       Parameters> Vth=0.2 Vds=1.8 Vgs=1.8 R=L/W*7000 Diodes> 4-1 4-3
+ Model> pfet_01v8_hvt      2291 M->pmos       Parameters> Vth=-0.2 Vds=1.8 Vgs=1.8 R=L/W*7000 Diodes> 1-4 3-4
+ Model> short              0 R->switch_on  Parameters>
+ModelList> end
+
+Power List> filename /openLANE_flow/designs/spm/runs/19-05_19-02/results/cvc/spm.power
+ VPWR power 1.8 -> 1.8 power
+ VGND power 0.0 -> 0.0 power
+ clk~>std_input input std_input -> min@0.0 max@1.8 input family(std_input;)
+ rst~>std_input input std_input -> min@0.0 max@1.8 input family(std_input;)
+ y~>std_input input std_input -> min@0.0 max@1.8 input family(std_input;)
+x[31:0]~>std_input input std_input
+ ->x[0] input std_input -> min@0.0 max@1.8 input family(std_input;)
+ ->x[10] input std_input -> min@0.0 max@1.8 input family(std_input;)
+ ->x[11] input std_input -> min@0.0 max@1.8 input family(std_input;)
+ ->x[12] input std_input -> min@0.0 max@1.8 input family(std_input;)
+ ->x[13] input std_input -> min@0.0 max@1.8 input family(std_input;)
+ ->x[14] input std_input -> min@0.0 max@1.8 input family(std_input;)
+ ->x[15] input std_input -> min@0.0 max@1.8 input family(std_input;)
+ ->x[16] input std_input -> min@0.0 max@1.8 input family(std_input;)
+ ->x[17] input std_input -> min@0.0 max@1.8 input family(std_input;)
+ ->x[18] input std_input -> min@0.0 max@1.8 input family(std_input;)
+ ->x[19] input std_input -> min@0.0 max@1.8 input family(std_input;)
+ ->x[1] input std_input -> min@0.0 max@1.8 input family(std_input;)
+ ->x[20] input std_input -> min@0.0 max@1.8 input family(std_input;)
+ ->x[21] input std_input -> min@0.0 max@1.8 input family(std_input;)
+ ->x[22] input std_input -> min@0.0 max@1.8 input family(std_input;)
+ ->x[23] input std_input -> min@0.0 max@1.8 input family(std_input;)
+ ->x[24] input std_input -> min@0.0 max@1.8 input family(std_input;)
+ ->x[25] input std_input -> min@0.0 max@1.8 input family(std_input;)
+ ->x[26] input std_input -> min@0.0 max@1.8 input family(std_input;)
+ ->x[27] input std_input -> min@0.0 max@1.8 input family(std_input;)
+ ->x[28] input std_input -> min@0.0 max@1.8 input family(std_input;)
+ ->x[29] input std_input -> min@0.0 max@1.8 input family(std_input;)
+ ->x[2] input std_input -> min@0.0 max@1.8 input family(std_input;)
+ ->x[30] input std_input -> min@0.0 max@1.8 input family(std_input;)
+ ->x[31] input std_input -> min@0.0 max@1.8 input family(std_input;)
+ ->x[3] input std_input -> min@0.0 max@1.8 input family(std_input;)
+ ->x[4] input std_input -> min@0.0 max@1.8 input family(std_input;)
+ ->x[5] input std_input -> min@0.0 max@1.8 input family(std_input;)
+ ->x[6] input std_input -> min@0.0 max@1.8 input family(std_input;)
+ ->x[7] input std_input -> min@0.0 max@1.8 input family(std_input;)
+ ->x[8] input std_input -> min@0.0 max@1.8 input family(std_input;)
+ ->x[9] input std_input -> min@0.0 max@1.8 input family(std_input;)
+> expected values
+> macros
+ #define std_input min@VGND max@VPWR -> min@0.0 max@1.8
+Power List> end
+
+CVC: Linking devices...
+Usage EQUIV: Time: 0  Memory: 8176  I/O: 432  Swap: 0
+Power nets 43
+Hash dump:parameter->resistance map
+Contains 53 buckets, 27 elements
+Element count 0, 28
+Element count 1, 23
+Element count 2, 2
+Unused hash: 0.53, average depth 1.15
+Hash dump:text->circuit map
+Contains 337 buckets, 438 elements
+Element count 0, 76
+Element count 1, 135
+Element count 2, 85
+Element count 3, 31
+Element count 4, 10
+Unused hash: 0.23, average depth 2.09
+Hash dump:string->text map
+Contains 1493 buckets, 2542 elements
+Element count 0, 270
+Element count 1, 459
+Element count 2, 392
+Element count 3, 237
+Element count 4, 101
+Element count 5, 24
+Element count 6, 7
+Element count 7, 2
+Element count 8, 1
+Unused hash: 0.18, average depth 2.67
+CVC: Shorting non conducting resistors...
+CVC: Calculating resistor voltages...
+Usage RES: Time: 0  Memory: 8176  I/O: 432  Swap: 0
+Power nets 43
+CVC: Calculating min/max voltages...
+Processing trivial nets found 592 trivial nets
+CVC: Ignoring invalid calculations...
+CVC:   Removed 0 calculations
+Copying master nets
+CVC: Ignoring non-conducting devices...
+CVC:   Ignored 0 devices
+Usage MIN/MAX1: Time: 0  Memory: 8176  I/O: 432  Swap: 0
+Power nets 677
+! Checking forward bias diode errors: 
+
+! Checking nmos source/drain vs bias errors: 
+
+! Checking nmos gate vs source errors: 
+
+! Checking pmos source/drain vs bias errors: 
+
+! Checking pmos gate vs source errors: 
+
+Usage ERROR: Time: 0  Memory: 8176  I/O: 432  Swap: 0
+CVC: Propagating Simulation voltages 1...
+Usage SIM1: Time: 0  Memory: 8176  I/O: 432  Swap: 0
+Power nets 677
+CVC: Propagating Simulation voltages 3...
+Usage SIM2: Time: 0  Memory: 8176  I/O: 432  Swap: 0
+Power nets 677
+Added 0 latch voltages
+CVC: Calculating min/max voltages...
+Processing trivial nets found 592 trivial nets
+CVC: Ignoring invalid calculations...
+CVC:   Removed 0 calculations
+Copying master nets
+CVC: Ignoring non-conducting devices...
+CVC:   Ignored 0 devices
+Usage MIN/MAX2: Time: 0  Memory: 8176  I/O: 432  Swap: 0
+Power nets 1311
+! Checking overvoltage errors
+
+! Checking nmos possible leak errors: 
+
+! Checking pmos possible leak errors: 
+
+! Checking mos floating input errors:
+
+! Checking expected values:
+
+CVC: Error Counts
+CVC: Fuse Problems:         0
+CVC: Min Voltage Conflicts: 0
+CVC: Max Voltage Conflicts: 0
+CVC: Leaks:                 0
+CVC: LDD drain->source:     0
+CVC: HI-Z Inputs:           0
+CVC: Forward Bias Diodes:   0
+CVC: NMOS Source vs Bulk:   0
+CVC: NMOS Gate vs Source:   0
+CVC: NMOS Possible Leaks:   0
+CVC: PMOS Source vs Bulk:   0
+CVC: PMOS Gate vs Source:   0
+CVC: PMOS Possible Leaks:   0
+CVC: Overvoltage-VBG:       0
+CVC: Overvoltage-VBS:       0
+CVC: Overvoltage-VDS:       0
+CVC: Overvoltage-VGS:       0
+CVC: Unexpected voltage :   0
+CVC: Total:                 0
+Usage Total: Time: 0  Memory: 8772  I/O: 464  Swap: 0
+Virtual net update/access 15582/457763
+CVC: Log output to /openLANE_flow/designs/spm/runs/19-05_19-02/results/cvc/cvc_spm.log
+CVC: End: Fri May 19 19:08:22 2023
+

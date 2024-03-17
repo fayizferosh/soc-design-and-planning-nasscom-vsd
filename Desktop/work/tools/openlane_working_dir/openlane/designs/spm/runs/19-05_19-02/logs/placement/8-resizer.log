@@ -1,0 +1,85 @@
+OpenROAD 0.9.0 1415572a73
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+Warning: /openLANE_flow/designs/spm/runs/19-05_19-02/tmp/resizer.lib line 32, default_operating_condition ss_100C_1v60 not found.
+Notice 0: Reading LEF file:  /openLANE_flow/designs/spm/runs/19-05_19-02/tmp/merged_unpadded.lef
+Notice 0:     Created 13 technology layers
+Notice 0:     Created 25 technology vias
+Notice 0:     Created 440 library cells
+Notice 0: Finished LEF file:  /openLANE_flow/designs/spm/runs/19-05_19-02/tmp/merged_unpadded.lef
+Notice 0: 
+Reading DEF file: /openLANE_flow/designs/spm/runs/19-05_19-02/tmp/placement/8-replace.def
+Notice 0: Design: spm
+Notice 0:     Created 38 pins.
+Notice 0:     Created 431 components and 2533 component-terminals.
+Notice 0:     Created 2 special nets and 0 connections.
+Notice 0:     Created 312 nets and 997 connections.
+Notice 0: Finished DEF file: /openLANE_flow/designs/spm/runs/19-05_19-02/tmp/placement/8-replace.def
+create_clock [get_ports $::env(CLOCK_PORT)]  -name $::env(CLOCK_PORT)  -period $::env(CLOCK_PERIOD)
+set input_delay_value [expr $::env(CLOCK_PERIOD) * $::env(IO_PCT)]
+set output_delay_value [expr $::env(CLOCK_PERIOD) * $::env(IO_PCT)]
+puts "\[INFO\]: Setting output delay to: $output_delay_value"
+[INFO]: Setting output delay to: 2.0
+puts "\[INFO\]: Setting input delay to: $input_delay_value"
+[INFO]: Setting input delay to: 2.0
+set_max_fanout $::env(SYNTH_MAX_FANOUT) [current_design]
+set clk_indx [lsearch [all_inputs] [get_port $::env(CLOCK_PORT)]]
+#set rst_indx [lsearch [all_inputs] [get_port resetn]]
+set all_inputs_wo_clk [lreplace [all_inputs] $clk_indx $clk_indx]
+#set all_inputs_wo_clk_rst [lreplace $all_inputs_wo_clk $rst_indx $rst_indx]
+set all_inputs_wo_clk_rst $all_inputs_wo_clk
+# correct resetn
+set_input_delay $input_delay_value  -clock [get_clocks $::env(CLOCK_PORT)] $all_inputs_wo_clk_rst
+#set_input_delay 0.0 -clock [get_clocks $::env(CLOCK_PORT)] {resetn}
+set_output_delay $output_delay_value  -clock [get_clocks $::env(CLOCK_PORT)] [all_outputs]
+# TODO set this as parameter
+set_driving_cell -lib_cell $::env(SYNTH_DRIVING_CELL) -pin $::env(SYNTH_DRIVING_CELL_PIN) [all_inputs]
+set cap_load [expr $::env(SYNTH_CAP_LOAD) / 1000.0]
+puts "\[INFO\]: Setting load to: $cap_load"
+[INFO]: Setting load to: 0.01765
+set_load  $cap_load [all_outputs]
+[INFO RSZ-0027] Inserted 34 input buffers.
+[INFO RSZ-0028] Inserted 1 output buffers.
+[INFO RSZ-0039] Resized 296 instances.
+Design Stats
+--------------------------------
+total instances           466
+multi row instances         0
+fixed instances           154
+nets                      349
+design area            6643.9 u^2
+fixed area              342.8 u^2
+movable area           3186.8 u^2
+utilization                51 %
+utilization padded         81 %
+rows                       30
+row height                2.7 u
+
+Placement Analysis
+--------------------------------
+total displacement     1457.6 u
+average displacement      3.1 u
+max displacement         41.1 u
+original HPWL          4439.4 u
+legalized HPWL         5926.5 u
+delta HPWL                 33 %
+
+[INFO DPL-0020] Mirrored 112 instances
+[INFO DPL-0021] HPWL before            5926.5 u
+[INFO DPL-0022] HPWL after             5743.4 u
+[INFO DPL-0023] HPWL delta               -3.1 %
+[WARNING DPL-0005] Overlap check failed (14).
+ PHY_67 overlaps PHY_3
+ PHY_73 overlaps PHY_7
+ PHY_79 overlaps PHY_11
+ PHY_85 overlaps PHY_15
+ PHY_91 overlaps PHY_19
+ PHY_97 overlaps PHY_23
+ PHY_103 overlaps PHY_27
+ PHY_109 overlaps PHY_31
+ PHY_115 overlaps PHY_35
+ PHY_121 overlaps PHY_39
+ PHY_127 overlaps PHY_43
+ PHY_133 overlaps PHY_47
+ PHY_139 overlaps PHY_51
+ PHY_145 overlaps PHY_55

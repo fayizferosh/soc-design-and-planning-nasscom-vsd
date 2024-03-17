@@ -1,0 +1,5 @@
+
+27. Executing CHECK pass (checking for obvious problems).
+checking module spm..
+Warning: Wire spm.\p is used but has no driver.
+found and reported 1 problems.

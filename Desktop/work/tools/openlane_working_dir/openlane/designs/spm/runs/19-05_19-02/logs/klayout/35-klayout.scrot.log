@@ -1,0 +1,8 @@
+Using Techfile: /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/klayout/sky130A.lyt
+Using layout file: /openLANE_flow/designs/spm/runs/19-05_19-02/results/klayout/spm.xor.gds
+[INFO] Reading tech file: /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/klayout/sky130A.lyt
+[INFO] Reading Layout file: /openLANE_flow/designs/spm/runs/19-05_19-02/results/klayout/spm.xor.gds
+Warning: Record length larger than 0x8000 encountered: interpreting as unsigned (position=1209910, record number=76174, cell=XOR)
+Warning: Record length larger than 0x8000 encountered: interpreting as unsigned (position=2068598, record number=127044, cell=XOR)
+[INFO] Writing out PNG screenshot '/openLANE_flow/designs/spm/runs/19-05_19-02/results/klayout/spm.xor.gds.png'
+Done

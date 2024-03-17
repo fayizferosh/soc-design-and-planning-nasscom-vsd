@@ -1,0 +1,6 @@
+Using Techfile: /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/klayout/sky130A.lyt
+Using layout file: /openLANE_flow/designs/spm/runs/19-05_19-02/results/cts/spm.cts.def
+[INFO] Reading tech file: /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/klayout/sky130A.lyt
+[INFO] Reading Layout file: /openLANE_flow/designs/spm/runs/19-05_19-02/results/cts/spm.cts.def
+[INFO] Writing out PNG screenshot '/openLANE_flow/designs/spm/runs/19-05_19-02/results/cts/spm.cts.def.png'
+Done

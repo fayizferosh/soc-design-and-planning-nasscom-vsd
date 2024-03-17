@@ -1,0 +1,40 @@
+[INFO]: Current run directory is /openLANE_flow/designs/spm/runs/29-06_07-34
+[INFO]: Preparing LEF Files
+[INFO]: Extracting the number of available metal layers from /home/kunalg123/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd.tlef
+[INFO]: The number of available metal layers is 6
+[INFO]: The available metal layers are li1 met1 met2 met3 met4 met5
+[INFO]: Merging LEF Files...
+[INFO]: Trimming Liberty...
+[INFO]: Generating Exclude List...
+[INFO]: Storing configs into config.tcl ...
+[INFO]: Preparation complete
+[INFO]: Running Synthesis...
+[INFO]: current step index: 1
+[INFO]: Changing netlist from 0 to /openLANE_flow/designs/spm/runs/29-06_07-34/results/synthesis/spm.synthesis.v
+[INFO]: Running Static Timing Analysis...
+[INFO]: current step index: 2
+[INFO]: Synthesis was successful
+[INFO]: Running Floorplanning...
+[INFO]: Running Initial Floorplanning...
+[INFO]: current step index: 3
+[INFO]: Core area width: 81.42
+[INFO]: Core area height: 81.60000000000001
+[WARNING]: Current core area is too small for a power grid
+[WARNING]: Minimizing the power grid!!!!
+[INFO]: Changing layout from 0 to /openLANE_flow/designs/spm/runs/29-06_07-34/tmp/floorplan/3-verilog2def_openroad.def
+[INFO]: Running IO Placement...
+[INFO]: current step index: 4
+[INFO]: Changing layout from /openLANE_flow/designs/spm/runs/29-06_07-34/tmp/floorplan/3-verilog2def_openroad.def to /openLANE_flow/designs/spm/runs/29-06_07-34/tmp/floorplan/4-ioPlacer.def
+[INFO]: Running Tap/Decap Insertion...
+[INFO]: current step index: 5
+[INFO]: Changing layout from /openLANE_flow/designs/spm/runs/29-06_07-34/tmp/floorplan/4-ioPlacer.def to /openLANE_flow/designs/spm/runs/29-06_07-34/results/floorplan/spm.floorplan.def
+[INFO]: Taking a Screenshot of the Layout Using Klayout...
+[INFO]: current step index: 6
+[INFO]: Screenshot taken.
+[INFO]: Power planning the following nets
+[INFO]: Power: VPWR
+[INFO]: Ground: VGND
+[INFO]: Generating PDN...
+[INFO]: current step index: 7
+[INFO]: PDN generation was successful.
+[INFO]: Changing layout from /openLANE_flow/designs/spm/runs/29-06_07-34/results/floorplan/spm.floorplan.def to /openLANE_flow/designs/spm/runs/29-06_07-34/tmp/floorplan/7-pdn.def

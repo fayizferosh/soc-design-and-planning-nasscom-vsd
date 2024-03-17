@@ -1,0 +1,24 @@
+
+28. Printing statistics.
+
+=== spm ===
+
+   Number of wires:                281
+   Number of wire bits:            312
+   Number of public wires:          39
+   Number of public wire bits:      70
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                277
+     sky130_fd_sc_hd__a21oi_2        1
+     sky130_fd_sc_hd__a22o_2        31
+     sky130_fd_sc_hd__a31oi_2        1
+     sky130_fd_sc_hd__and2_2        31
+     sky130_fd_sc_hd__buf_1         85
+     sky130_fd_sc_hd__dfrtp_2       64
+     sky130_fd_sc_hd__inv_2          2
+     sky130_fd_sc_hd__o2bb2a_2      62
+
+   Chip area for module '\spm': 3270.636800
+

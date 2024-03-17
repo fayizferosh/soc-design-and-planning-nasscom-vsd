@@ -1,0 +1,30 @@
+Tue Jun 29 07:34:38 UTC 2021 - Executing "python3 /openLANE_flow/scripts/extract_metal_layers.py -t /home/kunalg123/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd.tlef -o /openLANE_flow/designs/spm/runs/29-06_07-34/tmp/met_layers_list.txt"
+
+Tue Jun 29 07:34:38 UTC 2021 - Executing "/openLANE_flow/scripts/mergeLef.py -i /home/kunalg123/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd.tlef {/home/kunalg123/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd__decap_12.lef /home/kunalg123/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef /home/kunalg123/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd__fill_12.lef /home/kunalg123/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd__fakediode_2.lef} -o /openLANE_flow/designs/spm/runs/29-06_07-34/tmp/merged_unpadded.lef |& tee >&@stdout"
+
+Tue Jun 29 07:34:38 UTC 2021 - Executing "/openLANE_flow/scripts/libtrim.pl /home/kunalg123/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib /openLANE_flow/designs/spm/runs/29-06_07-34/tmp/trimmed.lib.exclude.list > /openLANE_flow/designs/spm/runs/29-06_07-34/tmp/trimmed.lib"
+
+Tue Jun 29 07:34:38 UTC 2021 - Executing "echo {openlane v0.21} > /openLANE_flow/designs/spm/runs/29-06_07-34/OPENLANE_VERSION"
+
+Tue Jun 29 07:34:43 UTC 2021 - Executing "sed -E {s/^([[:space:]]+)pg_pin(.*)/\1pin\2\n\1    direction : "inout";/g} /home/kunalg123/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib > /openLANE_flow/designs/spm/runs/29-06_07-34/tmp/sky130_fd_sc_hd__tt_025C_1v80.no_pg.lib"
+
+Tue Jun 29 07:34:44 UTC 2021 - Executing "yosys -c /openLANE_flow/scripts/synth.tcl -l /openLANE_flow/designs/spm/runs/29-06_07-34/logs/synthesis/1-yosys.log |& tee >&@stdout"
+
+Tue Jun 29 07:34:45 UTC 2021 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openLANE_flow\/designs\/spm\/runs\/29-06_07-34\/results\/synthesis\/spm.synthesis.v/} /openLANE_flow/designs/spm/runs/29-06_07-34/config.tcl"
+
+Tue Jun 29 07:34:45 UTC 2021 - Executing "sed -i -e {s/\(set ::env(PREV_NETLIST)\).*/\1 0/} /openLANE_flow/designs/spm/runs/29-06_07-34/config.tcl"
+
+Tue Jun 29 07:34:45 UTC 2021 - Executing "sed -i /defparam/d /openLANE_flow/designs/spm/runs/29-06_07-34/results/synthesis/spm.synthesis.v"
+
+Tue Jun 29 07:34:45 UTC 2021 - Executing "sta /openLANE_flow/scripts/sta.tcl |& tee >&@stdout /openLANE_flow/designs/spm/runs/29-06_07-34/logs/synthesis/2-opensta"
+
+Tue Jun 29 07:34:51 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_floorplan.tcl |& tee >&@stdout /openLANE_flow/designs/spm/runs/29-06_07-34/logs/floorplan/3-verilog2def.openroad.log"
+
+Tue Jun 29 07:34:52 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_ioplacer.tcl |& tee >&@stdout /openLANE_flow/designs/spm/runs/29-06_07-34/logs/floorplan/4-ioPlacer.log"
+
+Tue Jun 29 07:34:54 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_tapcell.tcl |& tee >&@stdout /openLANE_flow/designs/spm/runs/29-06_07-34/logs/floorplan/5-tapcell.log"
+
+Tue Jun 29 07:34:55 UTC 2021 - Executing "bash /openLANE_flow/scripts/klayout/scrotLayout.sh /home/kunalg123/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/klayout/sky130A.lyt /openLANE_flow/designs/spm/runs/29-06_07-34/results/floorplan/spm.floorplan.def |& tee >&@stdout /openLANE_flow/designs/spm/runs/29-06_07-34/logs/klayout/6-klayout.scrot.log"
+
+Tue Jun 29 07:35:00 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_pdn.tcl |& tee >&@stdout /openLANE_flow/designs/spm/runs/29-06_07-34/logs/floorplan/7-pdn.log"
+

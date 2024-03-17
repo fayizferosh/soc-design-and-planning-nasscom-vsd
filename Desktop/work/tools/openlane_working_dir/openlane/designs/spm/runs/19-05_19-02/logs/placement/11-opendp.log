@@ -1,0 +1,43 @@
+OpenROAD 0.9.0 1415572a73
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+Notice 0: Reading LEF file:  /openLANE_flow/designs/spm/runs/19-05_19-02/tmp/merged_unpadded.lef
+Notice 0:     Created 13 technology layers
+Notice 0:     Created 25 technology vias
+Notice 0:     Created 440 library cells
+Notice 0: Finished LEF file:  /openLANE_flow/designs/spm/runs/19-05_19-02/tmp/merged_unpadded.lef
+Notice 0: 
+Reading DEF file: /openLANE_flow/designs/spm/runs/19-05_19-02/tmp/placement/8-resizer.def
+Notice 0: Design: spm
+Notice 0:     Created 38 pins.
+Notice 0:     Created 466 components and 2743 component-terminals.
+Notice 0:     Created 2 special nets and 0 connections.
+Notice 0:     Created 347 nets and 1067 connections.
+Notice 0: Finished DEF file: /openLANE_flow/designs/spm/runs/19-05_19-02/tmp/placement/8-resizer.def
+Design Stats
+--------------------------------
+total instances           466
+multi row instances         0
+fixed instances           154
+nets                      349
+design area            6643.9 u^2
+fixed area              342.8 u^2
+movable area           3186.8 u^2
+utilization                51 %
+utilization padded         75 %
+rows                       30
+row height                2.7 u
+
+Placement Analysis
+--------------------------------
+total displacement        0.0 u
+average displacement      0.0 u
+max displacement          0.0 u
+original HPWL          5743.4 u
+legalized HPWL         5926.5 u
+delta HPWL                  3 %
+
+[INFO DPL-0020] Mirrored 112 instances
+[INFO DPL-0021] HPWL before            5926.5 u
+[INFO DPL-0022] HPWL after             5743.4 u
+[INFO DPL-0023] HPWL delta               -3.1 %
