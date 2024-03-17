@@ -206,6 +206,10 @@ Flop Ratio = \frac{1613}{14876} = 0.108429685
 Percentage of DFF's = 0.108429685 * 100 = 10.84296854
 ```
 
+Synthesis logs reports and results can be found in following run folder
+
+[Synthesis Run - 15-03_15-51](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/tree/main/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/15-03_15-51)
+
 ## Day 2 - Good floorplan vs bad floorplan and introduction to library cells (15/03/2024)
 
 ### Theory
