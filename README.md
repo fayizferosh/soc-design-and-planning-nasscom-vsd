@@ -266,7 +266,7 @@ Screenshot of contents of floorplan def
 
 According to floorplan def
 ```math
-1000\ Unit\ Distance = 1\ Microns
+1000\ Unit\ Distance = 1\ Micron
 ```
 ```math
 Die\ width\ in\ unit\ distance = 660685 - 0 = 660685
