@@ -423,6 +423,38 @@ NMOS source connectivity to VSS (here VGND) verified
 
 ![Screenshot from 2024-03-19 00-36-09](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/107a8e0b-43de-4b5d-90fe-516ea83673b1)
 
+Deleting necessary layout part to see DRC error
+
+![Screenshot from 2024-03-19 01-10-28](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/861912e4-eef9-4226-b563-db7f49ca6632)
+
+Commands for spice extraction of the custom inverter layout to be used in tkcon window of magic
+
+```bash
+# Check current directory
+pwd
+
+# Extraction command to extract to .ext format
+extract all
+
+# Before converting ext to spice this command enable the parasitic extraction also
+ext2spice cthresh 0 rthresh 0
+
+# Converting to ext to spice
+ext2spice
+```
+
+Screenshot of tkcon window after running above commands
+
+![Screenshot from 2024-03-19 01-24-17](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/831b0be9-3c02-4bbb-800e-6f1c3dc1ba1a)
+
+Screenshot of created spice file
+
+![Screenshot from 2024-03-19 01-27-07](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/2c645f55-c4d5-4007-8b9c-73ba8a8e5bcb)
+
+Measuring unit distance in layout grid
+
+![Screenshot from 2024-03-19 01-30-15](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/74335564-b7a6-4b7d-b4b7-bb251c8d790b)
+
 ## Day 4 -  (17/03/2024)
 
 ### Theory
