@@ -372,7 +372,56 @@ Day 2 logs reports and results can be found in following run folder
 
 ### Implementation
 
-* Day 3 task is to
+* Day 3 tasks:-
+1. Clone custom inverter standard cell design from github repository: [Standard cell design and characterization using OpenLANE flow](https://github.com/nickson-jose/vsdstdcelldesign).
+2. Load the custom inverter layout in magic and explore.
+3. Spice extraction of inverter in magic.
+4. Post-layout ngspice simulations.
+
+```bash
+# Change directory to openlane
+cd Desktop/work/tools/openlane_working_dir/openlane
+
+# Clone the repository with custom inverter design
+git clone https://github.com/nickson-jose/vsdstdcelldesign
+
+# Change into repository directory
+cd vsdstdcelldesign
+
+# Copy magic tech file to the repo directory for easy access
+cp /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech .
+
+# Check contents whether everything is present
+ls
+
+# Command to open custom inverter layout in magic
+magic -T sky130A.tech sky130_inv.mag &
+```
+
+Screenshot of commands run
+
+![Screenshot from 2024-03-19 00-22-27](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/8f304929-a190-4aa1-9cc4-b8fefa1909e8)
+
+Screenshot of custom inverter layout in magic
+
+![Screenshot from 2024-03-19 00-22-44](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/6eae887c-ebc6-4771-8bcc-e4edaf9947d9)
+
+NMOS and PMOS identified
+
+![Screenshot from 2024-03-19 00-28-03](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/eada5c8b-154c-4eea-819c-d49f89495acb)
+![Screenshot from 2024-03-19 00-29-14](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/dec7e465-8fd0-45d5-bac6-10de1acb8c76)
+
+Output Y connectivity to PMOS and NMOS drain verified
+
+![Screenshot from 2024-03-19 00-31-17](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/e16fb883-907e-437a-b8d8-1b9d1b2e67a6)
+
+PMOS source connectivity to VDD (here VPWR) verified
+
+![Screenshot from 2024-03-19 00-34-11](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/173efda1-d5d1-49d9-a040-771092b1e55b)
+
+NMOS source connectivity to VSS (here VGND) verified
+
+![Screenshot from 2024-03-19 00-36-09](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/107a8e0b-43de-4b5d-90fe-516ea83673b1)
 
 ## Day 4 -  (17/03/2024)
 
