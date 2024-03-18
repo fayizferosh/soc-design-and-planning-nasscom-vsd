@@ -366,7 +366,7 @@ Day 2 logs reports and results can be found in following run folder
 
 [Day 2 Run - 17-03_12-06](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/tree/main/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/17-03_12-06)
 
-## Day 3 -  (16/03/2024)
+## Day 3 - Design library cell using Magic Layout and ngspice characterization (16/03/2024)
 
 ### Theory
 
