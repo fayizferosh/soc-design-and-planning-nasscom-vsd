@@ -395,6 +395,7 @@ Day 2 logs reports and results can be found in following run folder
 3. Spice extraction of inverter in magic.
 4. Editing the spice model file for analysis through simulation.
 5. Post-layout ngspice simulations.
+6. Find problem in the DRC section of the magic tech file for the skywater process and fix them.
 
 ```bash
 # Change directory to openlane
@@ -583,6 +584,28 @@ Fall\ Cell\ Delay = Time\ taken\ for\ output\ to\ fall\ to\ 50\% - Time\ taken\ 
 
 ```math
 Fall\ Cell\ Delay = 4.07 - 4.05 = 0.02\ ns = 20\ ps
+```
+
+Commands to download and view the corrupted skywater process magic tech file and associated files to perform drc corrections
+
+```bash
+# Change to home directory
+cd
+
+# Command to download the lab files
+wget http://opencircuitdesign.com/open_pdks/archive/drc_tests.tgz
+
+# Since lab file is compressed command to extract it
+tar xfz drc_tests.tgz
+
+# Change directory into the lab folder
+cd drc_tests
+
+# List all files and directories present in the current directory
+ls -al
+
+# Command to open magic tool in better graphics
+magic -d XR
 ```
 
 ## Day 4 -  (17/03/2024)
