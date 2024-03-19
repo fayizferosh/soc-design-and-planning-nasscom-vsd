@@ -24,6 +24,11 @@ Comments
 
 ### Theory
 
+<details>
+  <summary>
+Expand or Collapse
+  </summary>
+  
 * In any embedded board we have seen, the part of the board we consider as the chip is only the ***PACKAGE*** of the chip which is nothing but a protective layer or packet bound over the actual chip and the actual manufatured chip is usually present at the center of a package wherein, the connections from package is fed to the chip by ***WIRE BOUND*** method which is none other than basic wired connection.
 
 ![image](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/7562205a-7435-46c7-a66e-de1626911f14)
@@ -146,6 +151,8 @@ Comments
 * Static Timing Analysis (STA) to verify that the design runs at the designated clock frequency.
 
 ![image](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/d8bc72cd-2fe9-4ae2-9431-68a6fa77c671)
+
+</details>
 
 ### Implementation
 
