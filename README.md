@@ -376,7 +376,8 @@ Day 2 logs reports and results can be found in following run folder
 1. Clone custom inverter standard cell design from github repository: [Standard cell design and characterization using OpenLANE flow](https://github.com/nickson-jose/vsdstdcelldesign).
 2. Load the custom inverter layout in magic and explore.
 3. Spice extraction of inverter in magic.
-4. Post-layout ngspice simulations.
+4. Editing the spice model file for analysis through simulation.
+5. Post-layout ngspice simulations.
 
 ```bash
 # Change directory to openlane
@@ -454,6 +455,118 @@ Screenshot of created spice file
 Measuring unit distance in layout grid
 
 ![Screenshot from 2024-03-19 01-30-15](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/74335564-b7a6-4b7d-b4b7-bb251c8d790b)
+
+Final edited spice file ready for ngspice simulation
+
+![Screenshot from 2024-03-19 14-50-54](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/b5d20507-b65e-4b54-ba8e-576fb4d09429)
+![Screenshot from 2024-03-19 14-51-16](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/9cd17c95-de5b-48da-b8bc-2ee0c30915ef)
+
+Commands for ngspice simulation
+
+```bash
+# Command to directly load spice file for simulation to ngspice
+ngspice sky130_inv.spice
+
+# Now that we have entered ngspice with the simulation spice file loaded we just have to load the plot
+plot y vs time a
+```
+
+Screenshots of ngspice run
+
+![Screenshot from 2024-03-19 14-56-42](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/c023ebb0-756f-4707-ae82-a28746f372da)
+![Screenshot from 2024-03-19 14-57-22](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/addefe5e-6a9a-44f2-943a-4a9373ddc56c)
+
+Screenshot of generated plot
+
+![Screenshot from 2024-03-19 14-58-55](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/dd14a5d5-ffd9-4ad8-a871-e32af61362a3)
+
+Rise transition time calculation
+
+```math
+Rise\ transition\ time = Time\ taken\ for\ output\ to\ reach\ 80\% - Time\ taken\ for\ output\ to\ reach\ 20\%
+```
+```math
+20\%\ of\ output = 660\ mV
+```
+```math
+80\%\ of\ output = 2.64\ V
+```
+
+20% Screenshots
+
+![Screenshot from 2024-03-19 15-15-02](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/261c420f-219f-4c26-ae32-6c0db82a722e)
+![Screenshot from 2024-03-19 15-20-04](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/bbb078c4-b3aa-436b-8832-23e5d7777081)
+
+80% Screenshots
+
+![Screenshot from 2024-03-19 15-23-34](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/d10a0ff1-0523-4fe4-96f4-eefc63f647f7)
+![Screenshot from 2024-03-19 15-24-13](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/929042ad-2032-49aa-ae07-2a2163b9603e)
+
+```math
+Rise\ transition\ time = 2.24638 - 2.18242 = 0.06396\ ns = 63.96\ ps
+```
+
+Fall transition time calculation
+
+```math
+Fall\ transition\ time = Time\ taken\ for\ output\ to\ reach\ 20\% - Time\ taken\ for\ output\ to\ reach\ 80\%
+```
+```math
+20\%\ of\ output = 660\ mV
+```
+```math
+80\%\ of\ output = 2.64\ V
+```
+
+20% Screenshots
+
+![Screenshot from 2024-03-19 15-34-22](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/0180052c-4b8c-4bd8-928c-cd8ab34d5a17)
+![Screenshot from 2024-03-19 15-34-34](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/83760cf7-18c9-45d1-8063-04baafe1dd1f)
+
+80% Screenshots
+
+![Screenshot from 2024-03-19 15-36-29](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/7bc0eeee-c7cd-464e-a90b-cac8d4f83144)
+![Screenshot from 2024-03-19 15-36-41](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/9a7dc3b0-9936-4704-97cd-1cd03cc6a8cb)
+
+```math
+Fall\ transition\ time = 4.0955 - 4.0536 = 0.0419\ ns = 41.9\ ps
+```
+
+Rise Cell Delay Calculation
+
+```math
+Rise\ Cell\ Delay = Time\ taken\ for\ output\ to\ rise\ to\ 50\% - Time\ taken\ for\ input\ to\ fall\ to\ 50\%
+```
+```math
+50\% of 3.3\ V = 1.65\ V
+```
+
+50% Screenshots
+
+![Screenshot from 2024-03-19 16-02-35](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/e34363cd-a70f-4939-b8e5-efb10620ce93)
+![Screenshot from 2024-03-19 16-03-46](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/f7452b60-3612-4bcf-a71d-b8ff021d5297)
+
+```math
+Rise\ Cell\ Delay = 2.21144 - 2.15008 = 0.06136\ ns = 61.36\ ps
+```
+
+Fall Cell Delay Calculation
+
+```math
+Fall\ Cell\ Delay = Time\ taken\ for\ output\ to\ fall\ to\ 50\% - Time\ taken\ for\ input\ to\ rise\ to\ 50\%
+```
+```math
+50\% of 3.3\ V = 1.65\ V
+```
+
+50% Screenshots
+
+![Screenshot from 2024-03-19 16-09-08](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/3d2ff2e5-dab6-497a-b5a4-74959f69c2a2)
+![Screenshot from 2024-03-19 16-10-03](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/aa88c26b-0cc4-4cf7-80d7-b2058e8fbc47)
+
+```math
+Fall\ Cell\ Delay = 4.07 - 4.05 = 0.02\ ns = 20\ ps
+```
 
 ## Day 4 -  (17/03/2024)
 
