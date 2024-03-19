@@ -538,7 +538,7 @@ Rise Cell Delay Calculation
 Rise\ Cell\ Delay = Time\ taken\ for\ output\ to\ rise\ to\ 50\% - Time\ taken\ for\ input\ to\ fall\ to\ 50\%
 ```
 ```math
-50\% of 3.3\ V = 1.65\ V
+50\%\ of\ 3.3\ V = 1.65\ V
 ```
 
 50% Screenshots
@@ -556,7 +556,7 @@ Fall Cell Delay Calculation
 Fall\ Cell\ Delay = Time\ taken\ for\ output\ to\ fall\ to\ 50\% - Time\ taken\ for\ input\ to\ rise\ to\ 50\%
 ```
 ```math
-50\% of 3.3\ V = 1.65\ V
+50\%\ of\ 3.3\ V = 1.65\ V
 ```
 
 50% Screenshots
