@@ -483,7 +483,7 @@ Screenshot of generated plot
 Rise transition time calculation
 
 ```math
-Rise\ transition\ time = Time\ taken\ for\ output\ to\ reach\ 80\% - Time\ taken\ for\ output\ to\ reach\ 20\%
+Rise\ transition\ time = Time\ taken\ for\ output\ to\ rise\ to\ 80\% - Time\ taken\ for\ output\ to\ rise\ to\ 20\%
 ```
 ```math
 20\%\ of\ output = 660\ mV
@@ -509,7 +509,7 @@ Rise\ transition\ time = 2.24638 - 2.18242 = 0.06396\ ns = 63.96\ ps
 Fall transition time calculation
 
 ```math
-Fall\ transition\ time = Time\ taken\ for\ output\ to\ reach\ 20\% - Time\ taken\ for\ output\ to\ reach\ 80\%
+Fall\ transition\ time = Time\ taken\ for\ output\ to\ fall\ to\ 20\% - Time\ taken\ for\ output\ to\ fall\ to\ 80\%
 ```
 ```math
 20\%\ of\ output = 660\ mV
