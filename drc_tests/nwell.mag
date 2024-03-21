@@ -1,0 +1,36 @@
+magic
+tech sky130A
+timestamp 1600223995
+<< error_p >>
+rect -22 393 16 923
+rect 1156 469 1229 899
+rect 2276 -511 2446 -463
+<< dnwell >>
+rect 2167 -721 2549 -408
+rect 3310 -672 3720 -267
+<< nwell >>
+rect -68 393 -22 923
+rect 670 469 1102 899
+rect 1156 469 1599 899
+rect 1997 461 2442 866
+rect 2098 -463 2616 -309
+rect 2098 -615 2276 -463
+rect 2446 -615 2616 -463
+rect 2098 -779 2616 -615
+rect 3246 -740 3784 -193
+rect 3938 -620 4283 -263
+<< labels >>
+flabel comment s 25 -459 25 -459 0 FreeSans 280 0 0 0 (not_implemented)
+flabel comment s 146 1124 146 1124 0 FreeSans 400 0 0 0 Nwell
+flabel comment s 1175 401 1175 401 0 FreeSans 280 0 0 0 nwell.2
+flabel comment s -39 286 -39 286 0 FreeSans 280 0 0 0 nwell.1
+flabel comment s 32 -554 32 -554 0 FreeSans 280 0 0 0 nwell.2b
+flabel comment s 2170 381 2170 381 0 FreeSans 280 0 0 0 nwell.4
+flabel comment s 2291 919 2291 919 0 FreeSans 280 0 0 0 ERROR:_Incorrect_Implementation
+flabel comment s 1106 -915 1106 -915 0 FreeSans 280 0 0 0 nwell.5
+flabel comment s 2330 -827 2330 -827 0 FreeSans 280 0 0 0 nwell.6
+flabel comment s 29 -626 29 -626 0 FreeSans 280 0 0 0 nwell.5a
+flabel comment s 17 -695 17 -695 0 FreeSans 280 0 0 0 nwell.5b
+flabel comment s 3537 -800 3537 -800 0 FreeSans 280 0 0 0 nwell.7
+flabel comment s 3707 -128 3707 -128 0 FreeSans 280 0 0 0 Error:_Depends_on_position_of_well
+<< end >>

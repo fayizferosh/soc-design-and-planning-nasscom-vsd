@@ -1,0 +1,82 @@
+magic
+tech sky130A
+timestamp 1600224289
+<< error_p >>
+rect 1626 555 1629 758
+rect 2926 529 3005 732
+<< dnwell >>
+rect 445 103 2595 1052
+<< nwell >>
+rect 395 945 2642 1099
+rect 395 214 549 945
+rect 2488 214 2642 945
+rect 395 60 2642 214
+<< nmos >>
+rect 1651 555 1716 758
+rect 2133 634 2212 666
+<< nsonos >>
+rect 826 541 905 744
+rect 971 541 1036 744
+rect 1550 555 1629 758
+rect 2133 554 2212 607
+rect 2926 529 3005 732
+rect 971 370 986 385
+<< ndiff >>
+rect 756 541 826 744
+rect 905 541 971 744
+rect 1036 541 1113 744
+rect 1471 555 1550 758
+rect 1629 555 1651 758
+rect 1716 555 1793 758
+rect 2057 634 2133 666
+rect 2212 634 2273 666
+rect 2054 554 2133 607
+rect 2212 554 2270 607
+rect 2847 529 2926 732
+rect 3005 529 3077 732
+rect 926 370 971 385
+rect 986 370 1034 385
+<< psubdiff >>
+rect 1238 625 1318 640
+rect 1238 533 1318 548
+<< psubdiffcont >>
+rect 1238 548 1318 625
+<< poly >>
+rect 826 744 905 799
+rect 971 744 1036 803
+rect 1550 758 1629 813
+rect 1651 758 1716 817
+rect 2926 732 3005 787
+rect 2133 666 2212 679
+rect 2133 607 2212 634
+rect 826 486 905 541
+rect 971 484 1036 541
+rect 1550 500 1629 555
+rect 1651 498 1716 555
+rect 2133 499 2212 554
+rect 971 385 986 484
+rect 2926 474 3005 529
+rect 971 341 986 370
+<< locali >>
+rect 1238 625 1318 640
+rect 1238 533 1318 548
+<< labels >>
+flabel comment s -47 423 -44 423 0 FreeSans 280 0 0 0 Correct_by_design
+flabel comment s 146 1124 146 1124 0 FreeSans 400 0 0 0 Tunnel_(Tunm)
+flabel comment s 835 1140 835 1140 0 FreeSans 280 0 0 0 Use_cif_see_SONOS
+flabel comment s -36 329 -36 329 0 FreeSans 280 0 0 0 tunm.1
+flabel comment s -46 255 -46 258 0 FreeSans 280 0 0 0 tunm.2
+flabel comment s -57 163 -57 164 0 FreeSans 280 0 0 0 tunm.3
+flabel comment s 1636 946 1636 951 0 FreeSans 280 0 0 0 Incorrect
+flabel comment s 2175 941 2175 941 0 FreeSans 280 0 0 0 Incorrect
+flabel comment s 1637 383 1637 383 0 FreeSans 280 0 0 0 lvtn.3a
+flabel comment s 2167 377 2167 377 0 FreeSans 280 0 0 0 lvtn.3b
+flabel comment s -58 89 -58 89 0 FreeSans 280 0 0 0 tunm.4
+flabel comment s -60 19 -60 19 0 FreeSans 280 0 0 0 tunm.5
+flabel comment s 2960 378 2960 378 0 FreeSans 280 0 0 0 tunm.6a
+flabel comment s 976 282 976 282 0 FreeSans 280 0 0 0 tunm.7
+flabel comment s 977 434 977 434 0 FreeSans 280 0 0 0 Incorrect
+flabel comment s -67 -40 -67 -40 0 FreeSans 280 0 0 0 tunm.8
+flabel comment s 1769 1149 1769 1149 0 FreeSans 280 0 0 0 Use_cif_see_COREID_for_tunm.8
+flabel comment s 229 -44 229 -44 0 FreeSans 280 0 0 0 Incorrect
+<< end >>
