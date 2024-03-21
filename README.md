@@ -20,7 +20,7 @@ Comments
 
 > 2 Week digital VLSI SoC design and planning workshop with complete RTL2GDSII flow organised by VSD in collaboration with NASSCOM
 
-## Day 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK (14/03/2024)
+## Section 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK (14/03/2024 - 15/03/2024)
 
 ### Theory
 
@@ -166,7 +166,7 @@ Expand or Collapse
 
 ### Implementation
 
-Day 1 tasks:- 
+Section 1 tasks:- 
 1. Run 'picorv32a' design synthesis using OpenLANE flow and generate necessary outputs.
 2. Calculate the flop ratio.
 
@@ -226,17 +226,17 @@ Flop\ Ratio = \frac{1613}{14876} = 0.108429685
 Percentage\ of\ DFF's = 0.108429685 * 100 = 10.84296854\ \%
 ```
 
-Day 1 logs reports and results can be found in following run folder
+Section 1 logs reports and results can be found in following run folder
 
-[Day 1 Run - 15-03_15-51](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/tree/main/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/15-03_15-51)
+[Section 1 Run - 15-03_15-51](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/tree/main/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/15-03_15-51)
 
-## Day 2 - Good floorplan vs bad floorplan and introduction to library cells (15/03/2024)
+## Section 2 - Good floorplan vs bad floorplan and introduction to library cells (16/03/2024 - 17/03/2024)
 
 ### Theory
 
 ### Implementation
 
-Day 2 tasks:- 
+Section 2 tasks:- 
 1. Run 'picorv32a' design floorplan using OpenLANE flow and generate necessary outputs.
 2. Calculate the die area in microns from the values in floorplan def.
 3. Load generated floorplan def in magic tool and explore the floorplan.
@@ -379,17 +379,17 @@ exit
 exit
 ```
 
-Day 2 logs reports and results can be found in following run folder
+Section 2 logs reports and results can be found in following run folder
 
-[Day 2 Run - 17-03_12-06](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/tree/main/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/17-03_12-06)
+[Section 2 Run - 17-03_12-06](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/tree/main/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/17-03_12-06)
 
-## Day 3 - Design library cell using Magic Layout and ngspice characterization (16/03/2024)
+## Section 3 - Design library cell using Magic Layout and ngspice characterization (16/03/2024 - 21/03/2024)
 
 ### Theory
 
 ### Implementation
 
-* Day 3 tasks:-
+* Section 3 tasks:-
 1. Clone custom inverter standard cell design from github repository: [Standard cell design and characterization using OpenLANE flow](https://github.com/nickson-jose/vsdstdcelldesign).
 2. Load the custom inverter layout in magic and explore.
 3. Spice extraction of inverter in magic.
@@ -608,18 +608,18 @@ ls -al
 magic -d XR
 ```
 
-## Day 4 -  (17/03/2024)
+## Section 4 -  (22/03/2024)
 
 ### Theory
 
 ### Implementation
 
-* Day 4 task is to
+* Section 4 tasks:-
 
-## Day 5 -  (18/03/2024)
+## Section 5 -  (18/03/2024)
 
 ### Theory
 
 ### Implementation
 
-* Day 5 task is to
+* Section 5 tasks:-
