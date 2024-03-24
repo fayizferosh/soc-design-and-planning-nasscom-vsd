@@ -737,6 +737,9 @@ Screenshot of magic window with rule implemented
 6. Run openlane flow synthesis with newly inserted custom inverter cell.
 7. Remove/reduce the newly introduced violations with the introduction of custom inverter cell by modifying design parameters.
 8. Once synthesis has accepted our custom inverter we can now run floorplan and placement and verify the cell is accepted in PnR flow.
+9. Do timing analysis with OpenSTA tool.
+10. Make timing ECO fixes to remove all violations.
+11. Implement the the new netlist in PnR flow.
 
 Conditions to be verified before moving forward with custom designed cell layout:
 * Condition 1: The input and output ports of the standard cell should lie on the intersection of the vertical and horizontal tracks.
