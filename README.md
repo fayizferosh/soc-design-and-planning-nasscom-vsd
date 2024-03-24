@@ -720,7 +720,7 @@ Screenshot of magic window with rule implemented
 
 ![Screenshot from 2024-03-22 01-10-25](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/49b1004d-f860-4ca7-86f4-4d79784a01cf)
 
-## Section 4 -  (22/03/2024)
+## Section 4 - Pre-layout timing analysis and importance of good clock tree (22/03/2024 - 24/03/2024)
 
 ### Theory
 
