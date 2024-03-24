@@ -397,7 +397,7 @@ Section 2 logs reports and results can be found in following run folder
 3. Spice extraction of inverter in magic.
 4. Editing the spice model file for analysis through simulation.
 5. Post-layout ngspice simulations.
-6. Find problem in the DRC section of the magic tech file for the skywater process and fix them.
+6. Find problem in the DRC section of the old magic tech file for the skywater process and fix them.
 
 ```bash
 # Change directory to openlane
