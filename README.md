@@ -767,6 +767,8 @@ Screenshot of magic window with rule implemented
 9. Do timing analysis with OpenSTA tool.
 10. Make timing ECO fixes to remove all violations.
 11. Replace the old netlist with the new netlist generated after timing ECO fix and implement the floorplan, placement and cts.
+12. Post-CTS OpenROAD timing analysis.
+13. Explore post-CTS OpenROAD timing analysis by removing 'sky130_fd_sc_hd__clkbuf_1' cell from clock 'CTS_CLK_BUFFER_LIST'.
 
 #### 1. Fix up small DRC errors and verify the design is ready to be inserted into our flow.
 
