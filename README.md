@@ -1078,3 +1078,7 @@ Abutment of power pins with other cell from library clearly visible
 ### Implementation
 
 * Section 5 tasks:-
+1. Perform generation of Power Distribution Network (PDN) and explore the PDN layout.
+2. Perfrom detailed routing using TritonRoute.
+3. Post-Route parasitic extraction using SPEF extractor.
+4. Post-Route OpenSTA timing analysis with the extracted parasitics of the route.
