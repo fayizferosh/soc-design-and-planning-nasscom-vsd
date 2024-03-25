@@ -177,6 +177,8 @@ Flop\ Ratio = \frac{Number\ of\ D\ Flip\ Flops}{Total\ Number\ of\ Cells}
 Percentage\ of\ DFF's = Flop\ Ratio * 100
 ```
 
+#### 1. Run 'picorv32a' design synthesis using OpenLANE flow and generate necessary outputs.
+
 Commands to invoke the OpenLANE flow and perform synthesis
 
 ```bash
@@ -213,6 +215,8 @@ Screenshots of running each commands
 ![2](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/5e03c8ca-8c7f-4579-a7bc-10161007910e)
 ![3](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/5f196a31-059e-4192-a208-8a15ba1a0dd7)
 
+#### 2. Calculate the flop ratio.
+
 Screenshots of synthesis statistics report file with required values highlighted
 
 ![Screenshot from 2024-03-15 22-02-42](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/9280fefc-80b2-44ef-af34-ef3bddd3c14e)
@@ -227,7 +231,7 @@ Flop\ Ratio = \frac{1613}{14876} = 0.108429685
 Percentage\ of\ DFF's = 0.108429685 * 100 = 10.84296854\ \%
 ```
 
-Section 1 logs reports and results can be found in following run folder
+Section 1 logs, reports and results can be found in following run folder
 
 [Section 1 Run - 15-03_15-51](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/tree/main/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/15-03_15-51)
 
@@ -242,10 +246,13 @@ Section 2 tasks:-
 2. Calculate the die area in microns from the values in floorplan def.
 3. Load generated floorplan def in magic tool and explore the floorplan.
 4. Run 'picorv32a' design congestion aware placement using OpenLANE flow and generate necessary outputs.
-5. Load generated placement def in magic tool and explore the floorplan.
+5. Load generated placement def in magic tool and explore the placement.
+
 ```math
 Area\ of\ die\ in\ microns = Die\ width\ in\ microns * Die\ height\ in\ microns
 ```
+
+#### 1. Run 'picorv32a' design floorplan using OpenLANE flow and generate necessary outputs.
 
 Commands to invoke the OpenLANE flow and perform floorplan
 
@@ -279,6 +286,8 @@ Screenshot of floorplan run
 ![Screenshot from 2024-03-17 18-06-19](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/7deda325-2ae8-4e98-aa71-7a54f5c34fcb)
 ![Screenshot from 2024-03-17 18-06-36](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/c1fe538f-c58f-46b9-9466-b0873a88eb6c)
 
+#### 2. Calculate the die area in microns from the values in floorplan def.
+
 Screenshot of contents of floorplan def
 
 ![Screenshot from 2024-03-17 18-34-53](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/9a0baa93-7db6-4148-b155-49b18c130522)
@@ -305,6 +314,8 @@ Die\ height\ in\ microns = \frac{671405}{1000} = 671.405\ Microns
 ```math
 Area\ of\ die\ in\ microns = 660.685 * 671.405 = 443587.212425\ Square\ Microns
 ```
+
+#### 3. Load generated floorplan def in magic tool and explore the floorplan.
 
 Commands to load floorplan def in magic in another terminal
 
@@ -341,6 +352,8 @@ Unplaced standard cells at the origin
 
 ![Screenshot from 2024-03-17 18-31-41](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/f875937c-cec4-4c2c-8c4b-6808d81821d6)
 
+#### 4. Run 'picorv32a' design congestion aware placement using OpenLANE flow and generate necessary outputs.
+
 Command to run placement
 
 ```tcl
@@ -352,6 +365,8 @@ Screenshots of placement run
 
 ![Screenshot from 2024-03-17 22-44-17](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/3ddaf32e-fdbb-4410-bfe6-7ea6b2640438)
 ![Screenshot from 2024-03-17 22-46-27](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/e6b36b9b-b9bc-4390-84fd-a10d23e2246f)
+
+#### 5. Load generated placement def in magic tool and explore the placement.
 
 Commands to load placement def in magic in another terminal
 
@@ -381,7 +396,7 @@ exit
 exit
 ```
 
-Section 2 logs reports and results can be found in following run folder
+Section 2 logs, reports and results can be found in following run folder
 
 [Section 2 Run - 17-03_12-06](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/tree/main/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/17-03_12-06)
 
@@ -398,6 +413,8 @@ Section 2 logs reports and results can be found in following run folder
 4. Editing the spice model file for analysis through simulation.
 5. Post-layout ngspice simulations.
 6. Find problem in the DRC section of the old magic tech file for the skywater process and fix them.
+
+#### 1. Clone custom inverter standard cell design from github repository
 
 ```bash
 # Change directory to openlane
@@ -422,6 +439,8 @@ magic -T sky130A.tech sky130_inv.mag &
 Screenshot of commands run
 
 ![Screenshot from 2024-03-19 00-22-27](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/8f304929-a190-4aa1-9cc4-b8fefa1909e8)
+
+#### 2. Load the custom inverter layout in magic and explore.
 
 Screenshot of custom inverter layout in magic
 
@@ -448,6 +467,8 @@ Deleting necessary layout part to see DRC error
 
 ![Screenshot from 2024-03-19 01-10-28](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/861912e4-eef9-4226-b563-db7f49ca6632)
 
+#### 3. Spice extraction of inverter in magic.
+
 Commands for spice extraction of the custom inverter layout to be used in tkcon window of magic
 
 ```tcl
@@ -472,6 +493,8 @@ Screenshot of created spice file
 
 ![Screenshot from 2024-03-19 01-27-07](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/2c645f55-c4d5-4007-8b9c-73ba8a8e5bcb)
 
+#### 4. Editing the spice model file for analysis through simulation.
+
 Measuring unit distance in layout grid
 
 ![Screenshot from 2024-03-19 01-30-15](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/74335564-b7a6-4b7d-b4b7-bb251c8d790b)
@@ -480,6 +503,8 @@ Final edited spice file ready for ngspice simulation
 
 ![Screenshot from 2024-03-19 14-50-54](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/b5d20507-b65e-4b54-ba8e-576fb4d09429)
 ![Screenshot from 2024-03-19 14-51-16](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/9cd17c95-de5b-48da-b8bc-2ee0c30915ef)
+
+#### 5. Post-layout ngspice simulations.
 
 Commands for ngspice simulation
 
@@ -587,6 +612,8 @@ Fall\ Cell\ Delay = Time\ taken\ for\ output\ to\ fall\ to\ 50\% - Time\ taken\ 
 ```math
 Fall\ Cell\ Delay = 4.07 - 4.05 = 0.02\ ns = 20\ ps
 ```
+
+#### 6. Find problem in the DRC section of the old magic tech file for the skywater process and fix them.
 
 Commands to download and view the corrupted skywater process magic tech file and associated files to perform drc corrections
 
@@ -741,6 +768,8 @@ Screenshot of magic window with rule implemented
 10. Make timing ECO fixes to remove all violations.
 11. Implement the the new netlist in PnR flow.
 
+#### 1. Fix up small DRC errors and verify the design is ready to be inserted into our flow.
+
 Conditions to be verified before moving forward with custom designed cell layout:
 * Condition 1: The input and output ports of the standard cell should lie on the intersection of the vertical and horizontal tracks.
 * Condition 2: Width of the standard cell should be odd multiples of the horizontal track pitch.
@@ -802,6 +831,8 @@ Vertical\ track\ pitch = 0.34\ um
 Height\ of\ standard\ cell = 2.72\ um = 0.34 * 8
 ```
 
+#### 2. Save the finalized layout with custom name and open it.
+
 Command for tkcon window to save the layout with custom name
 
 ```tcl
@@ -820,6 +851,8 @@ Screenshot of newly saved layout
 
 ![Screenshot from 2024-03-24 14-33-20](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/0beb4300-2ebc-4364-8e3d-37fdb6d52f5b)
 
+#### 3. Generate lef from the layout.
+
 Command for tkcon window to write lef
 
 ```tcl
@@ -834,6 +867,8 @@ Screenshot of command run
 Screenshot of newly created lef file
 
 ![Screenshot from 2024-03-24 14-37-19](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/15557990-33b4-4402-8c72-39b75da9ed07)
+
+#### 4. Copy the newly generated lef and associated required lib files to 'picorv32a' design 'src' directory.
 
 Commands to copy necessary files to 'picorv32a' design 'src' directory
 
@@ -855,6 +890,8 @@ Screenshot of commands run
 
 ![Screenshot from 2024-03-24 14-55-23](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/78559cee-ad3f-4301-83ae-df99f8417be3)
 
+#### 5. Edit 'config.tcl' to change lib file and add the new extra lef into the openlane flow.
+
 Commands to be added to config.tcl to include our custom cell in the openlane flow
 
 ```tcl
@@ -869,6 +906,8 @@ set ::env(EXTRA_LEFS) [glob $::env(OPENLANE_ROOT)/designs/$::env(DESIGN_NAME)/sr
 Edited config.tcl to include the added lef and change library to ones we added in src directory
 
 ![Screenshot from 2024-03-24 15-29-56](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/7b18f216-1160-4a65-91fd-998495ad3175)
+
+#### 6. Run openlane flow synthesis with newly inserted custom inverter cell.
 
 Commands to invoke the OpenLANE flow include new lef and perform synthesis 
 
@@ -904,6 +943,8 @@ Screenshots of commands run
 ![Screenshot from 2024-03-24 15-37-32](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/8f52942c-4b28-4abd-b9a0-d48f20a8255f)
 ![Screenshot from 2024-03-24 15-37-44](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/47849bfd-dc47-4d9c-9077-7fb672df4ead)
 ![Screenshot from 2024-03-24 15-45-08](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/0bc13ad3-d800-4681-b39d-8b64c9c9104f)
+
+#### 7. Remove/reduce the newly introduced violations with the introduction of custom inverter cell by modifying design parameters.
 
 Noting down current design values generated before modifying parameters to improve timing
 
@@ -957,6 +998,8 @@ Comparing to previously noted run values area has increased and worst negative s
 ![Screenshot from 2024-03-24 17-11-08](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/81418082-747e-4702-b5ad-bb3e450eceb3)
 ![Screenshot from 2024-03-24 17-11-19](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/a1bdb538-527c-4edd-877d-d4263e777321)
 
+#### 8. Once synthesis has accepted our custom inverter we can now run floorplan and placement and verify the cell is accepted in PnR flow.
+
 Now that our custom inverter is properly accepted in synthesis we can now run floorplan using following command
 
 ```tcl
@@ -969,7 +1012,7 @@ Screenshots of command run
 ![Screenshot from 2024-03-24 17-12-09](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/10a18995-0b7c-4f44-8ef4-cca9239652da)
 ![Screenshot from 2024-03-24 17-37-50](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/72966b69-cea0-4ae7-8dc0-c7130a8c750a)
 
-Since we are facing unexpected un explainable error while using `run_floorplan` command, we can instead use the following set of commands available based on information from `Desktop/work/tools/openlane_working_dir/openlane/scripts/tcl_commands/floorplan.tcl` and also based on `Floorplan Commands` section in `Desktop/work/tools/openlane_working_dir/openlane/docs/source/OpenLANE_commands.md`
+Since we are facing unexpected un-explainable error while using `run_floorplan` command, we can instead use the following set of commands available based on information from `Desktop/work/tools/openlane_working_dir/openlane/scripts/tcl_commands/floorplan.tcl` and also based on `Floorplan Commands` section in `Desktop/work/tools/openlane_working_dir/openlane/docs/source/OpenLANE_commands.md`
 
 ```tcl
 # Follwing commands are alltogather sourced in "run_floorplan" command
