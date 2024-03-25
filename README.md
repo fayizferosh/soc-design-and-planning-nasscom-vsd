@@ -764,7 +764,7 @@ Screenshot of magic window with rule implemented
 6. Run openlane flow synthesis with newly inserted custom inverter cell.
 7. Remove/reduce the newly introduced violations with the introduction of custom inverter cell by modifying design parameters.
 8. Once synthesis has accepted our custom inverter we can now run floorplan and placement and verify the cell is accepted in PnR flow.
-9. Do timing analysis with OpenSTA tool.
+9. Do Post-Synthesis timing analysis with OpenSTA tool.
 10. Make timing ECO fixes to remove all violations.
 11. Replace the old netlist with the new netlist generated after timing ECO fix and implement the floorplan, placement and cts.
 12. Post-CTS OpenROAD timing analysis.
@@ -1070,6 +1070,61 @@ Abutment of power pins with other cell from library clearly visible
 
 ![Screenshot from 2024-03-25 00-01-46](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/b52d756d-430c-4e43-b514-db0084dc1794)
 ![Screenshot from 2024-03-25 00-05-35](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/b8342668-c3fe-437e-b701-8c8be3740682)
+
+#### 9. Do Post-Synthesis timing analysis with OpenSTA tool.
+
+Since we are having 0 wns after improved timing run we are going to do timing analysis on initial run of synthesis which has lots of violations and no parameters were added to improve timing
+
+Commands to invoke the OpenLANE flow include new lef and perform synthesis 
+
+```bash
+# Change directory to openlane flow directory
+cd Desktop/work/tools/openlane_working_dir/openlane
+
+# alias docker='docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) efabless/openlane:v0.21'
+# Since we have aliased the long command to 'docker' we can invoke the OpenLANE flow docker sub-system by just running this command
+docker
+```
+```tcl
+# Now that we have entered the OpenLANE flow contained docker sub-system we can invoke the OpenLANE flow in the Interactive mode using the following command
+./flow.tcl -interactive
+
+# Now that OpenLANE flow is open we have to input the required packages for proper functionality of the OpenLANE flow
+package require openlane 0.9
+
+# Now the OpenLANE flow is ready to run any design and initially we have to prep the design creating some necessary files and directories for running a specific design which in our case is 'picorv32a'
+prep -design picorv32a
+
+# Adiitional commands to include newly added lef to openlane flow
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+add_lefs -src $lefs
+
+# Now that the design is prepped and ready, we can run synthesis using following command
+run_synthesis
+```
+
+Commands run final screenshot
+
+![Screenshot from 2024-03-26 00-38-21](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/07a8380c-4a5a-4f66-9309-87a7288d451b)
+
+Newly created `pre_sta.conf` for STA analysis in `openlane` directory
+
+![Screenshot from 2024-03-26 01-10-55](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/ad552878-0e61-466e-ad64-089ce561fd23)
+
+Newly created `my_base.sdc` for STA analysis in `openlane/designs/picorv32a/src` directory based on the file `openlane/scripts/base.sdc`
+
+![Screenshot from 2024-03-26 01-13-00](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/f5f59513-b78c-4cee-86b0-1c3fc19356d9)
+![Screenshot from 2024-03-26 01-13-21](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/4dcb749d-836a-4d15-aeb8-2a0824109d1e)
+
+Commands to run STA
+
+```bash
+# Change directory to openlane
+cd Desktop/work/tools/openlane_working_dir/openlane
+
+# Command to invoke OpenSTA tool with script
+sta pre_sta.conf
+```
 
 ## Section 5 -  (18/03/2024)
 
