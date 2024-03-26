@@ -177,6 +177,10 @@ Flop\ Ratio = \frac{Number\ of\ D\ Flip\ Flops}{Total\ Number\ of\ Cells}
 Percentage\ of\ DFF's = Flop\ Ratio * 100
 ```
 
+* All section 1 logs, reports and results can be found in following run folder:
+
+[Section 1 Run - 15-03_15-51](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/tree/main/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/15-03_15-51)
+
 #### 1. Run 'picorv32a' design synthesis using OpenLANE flow and generate necessary outputs.
 
 Commands to invoke the OpenLANE flow and perform synthesis
@@ -231,10 +235,6 @@ Flop\ Ratio = \frac{1613}{14876} = 0.108429685
 Percentage\ of\ DFF's = 0.108429685 * 100 = 10.84296854\ \%
 ```
 
-Section 1 logs, reports and results can be found in following run folder
-
-[Section 1 Run - 15-03_15-51](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/tree/main/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/15-03_15-51)
-
 ## Section 2 - Good floorplan vs bad floorplan and introduction to library cells (16/03/2024 - 17/03/2024)
 
 ### Theory
@@ -251,6 +251,10 @@ Section 2 tasks:-
 ```math
 Area\ of\ die\ in\ microns = Die\ width\ in\ microns * Die\ height\ in\ microns
 ```
+
+* All section 2 logs, reports and results can be found in following run folder:
+
+[Section 2 Run - 17-03_12-06](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/tree/main/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/17-03_12-06)
 
 #### 1. Run 'picorv32a' design floorplan using OpenLANE flow and generate necessary outputs.
 
@@ -396,10 +400,6 @@ exit
 exit
 ```
 
-Section 2 logs, reports and results can be found in following run folder
-
-[Section 2 Run - 17-03_12-06](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/tree/main/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/17-03_12-06)
-
 ## Section 3 - Design library cell using Magic Layout and ngspice characterization (16/03/2024 - 21/03/2024)
 
 ### Theory
@@ -413,6 +413,14 @@ Section 2 logs, reports and results can be found in following run folder
 4. Editing the spice model file for analysis through simulation.
 5. Post-layout ngspice simulations.
 6. Find problem in the DRC section of the old magic tech file for the skywater process and fix them.
+
+* Section 3 - Tasks 1 to 5 files, reports and logs can be found in the following folder:
+
+[Section 3 - Tasks 1 to 5 \(vsdstdcelldesign\)](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/tree/main/Desktop/work/tools/openlane_working_dir/openlane/vsdstdcelldesign)
+
+* Section 3 - Task 6 files, reports and logs can be found in the following folder:
+
+[Section 3 - Task 6 \(drc_tests\)](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/tree/main/drc_tests)
 
 #### 1. Clone custom inverter standard cell design from github repository
 
@@ -771,6 +779,26 @@ Screenshot of magic window with rule implemented
 11. Replace the old netlist with the new netlist generated after timing ECO fix and implement the floorplan, placement and cts.
 12. Post-CTS OpenROAD timing analysis.
 13. Explore post-CTS OpenROAD timing analysis by removing 'sky130_fd_sc_hd__clkbuf_1' cell from clock buffer list variable 'CTS_CLK_BUFFER_LIST'.
+
+* Section 4 - Tasks 1 to 4 files, reports and logs can be found in the following folder:
+
+[Section 4 - Tasks 1 to 4 \(vsdstdcelldesign\)](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/tree/main/Desktop/work/tools/openlane_working_dir/openlane/vsdstdcelldesign)
+
+* Section 4 - Task 4 files, reports and logs can be found in the following folder:
+
+[Section 4 - Task 4 \(src\)](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/tree/main/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src)
+
+* Section 4 - Task 5 files, reports and logs can be found in the following folder:
+
+[Section 4 - Task 5 \(picorv32a\)](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/tree/main/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a)
+
+* Section 4 - Tasks 6 to 8 & 11 to 13 logs, reports and results can be found in following run folder:
+
+[Section 4 - Tasks 6 to 8 & 11 to 13 Run \(24-03_10-03\)](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/tree/main/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/24-03_10-03)
+
+* Section 4 - Tasks 9 to 11 logs, reports and results can be found in following run folder:
+
+[Section 4 - Tasks 9 to 11 Run \(25-03_18-52\)](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/tree/main/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/25-03_18-52)
 
 #### 1. Fix up small DRC errors and verify the design is ready to be inserted into our flow.
 
@@ -1535,6 +1563,10 @@ Screenshots of commands run and timing report generated
 2. Perfrom detailed routing using TritonRoute.
 3. Post-Route parasitic extraction using SPEF extractor.
 4. Post-Route OpenSTA timing analysis with the extracted parasitics of the route.
+
+* All section 5 logs, reports and results can be found in following run folder:
+
+[Section 5 Run - 26-03_08-45](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/tree/main/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/26-03_08-45)
 
 #### 1. Perform generation of Power Distribution Network (PDN) and explore the PDN layout.
 
