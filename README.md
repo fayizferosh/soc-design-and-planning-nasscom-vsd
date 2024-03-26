@@ -615,6 +615,8 @@ Fall\ Cell\ Delay = 4.07 - 4.05 = 0.02\ ns = 20\ ps
 
 #### 6. Find problem in the DRC section of the old magic tech file for the skywater process and fix them.
 
+Link to Sky130 Periphery rules: [https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html](https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html)
+
 Commands to download and view the corrupted skywater process magic tech file and associated files to perform drc corrections
 
 ```bash
@@ -768,7 +770,7 @@ Screenshot of magic window with rule implemented
 10. Make timing ECO fixes to remove all violations.
 11. Replace the old netlist with the new netlist generated after timing ECO fix and implement the floorplan, placement and cts.
 12. Post-CTS OpenROAD timing analysis.
-13. Explore post-CTS OpenROAD timing analysis by removing 'sky130_fd_sc_hd__clkbuf_1' cell from clock 'CTS_CLK_BUFFER_LIST'.
+13. Explore post-CTS OpenROAD timing analysis by removing 'sky130_fd_sc_hd__clkbuf_1' cell from clock buffer list variable 'CTS_CLK_BUFFER_LIST'.
 
 #### 1. Fix up small DRC errors and verify the design is ready to be inserted into our flow.
 
@@ -1208,7 +1210,319 @@ Result - slack reduced
 
 ![Screenshot from 2024-03-26 07-02-44](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/c50c6023-1836-468d-a8c3-955b02e4224c)
 ![Screenshot from 2024-03-26 07-04-08](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/6059a511-9977-4d9e-8dde-8939f0e1b8f7)
+![Screenshot from 2024-03-26 09-42-15](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/df3dba3c-9445-4d51-9842-bf4410f05cf5)
 ![Screenshot from 2024-03-26 07-07-50](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/f141d1ff-4e21-4f9a-ab47-19579a686ac4)
+
+OR gate of drive strength 2 is driving 4 fanouts
+
+![Screenshot from 2024-03-26 09-46-23](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/3f66eed9-c43d-483e-ab85-21d70452b81f)
+
+Commands to perform analysis and optimize timing by replacing with OR gate of drive strength 4
+
+```tcl
+# Reports all the connections to a net
+report_net -connections _11675_
+
+# Replacing cell
+replace_cell _14514_ sky130_fd_sc_hd__or3_4
+
+# Generating custom timing report
+report_checks -fields {net cap slew input_pins} -digits 4
+```
+
+Result - slack reduced
+
+![Screenshot from 2024-03-26 09-49-29](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/d896c1fa-078e-4fe1-8e4d-60fae870d672)
+![Screenshot from 2024-03-26 09-50-13](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/a21abd89-b92a-4d28-b065-6b8b523026de)
+![Screenshot from 2024-03-26 09-50-33](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/9b961126-3de7-450e-9789-5009ca7f6a16)
+
+OR gate of drive strength 2 driving OA gate has more delay
+
+![Screenshot from 2024-03-26 10-22-10](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/7669eeef-7b93-4cfd-a152-17eec772496a)
+
+Commands to perform analysis and optimize timing by replacing with OR gate of drive strength 4
+
+```tcl
+# Reports all the connections to a net
+report_net -connections _11643_
+
+# Replacing cell
+replace_cell _14481_ sky130_fd_sc_hd__or4_4
+
+# Generating custom timing report
+report_checks -fields {net cap slew input_pins} -digits 4
+```
+
+Result - slack reduced
+
+![Screenshot from 2024-03-26 10-29-31](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/c63cf6a1-582d-43e5-907f-e292b94cc086)
+![Screenshot from 2024-03-26 10-29-55](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/6495c2e8-78c8-41d2-b783-628f36b982c5)
+
+OR gate of drive strength 2 driving OA gate has more delay
+
+![Screenshot from 2024-03-26 10-32-27](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/4185dc98-a065-49d3-a92f-fb4b02f23ee5)
+
+Commands to perform analysis and optimize timing by replacing with OR gate of drive strength 4
+
+```tcl
+# Reports all the connections to a net
+report_net -connections _11668_
+
+# Replacing cell
+replace_cell _14506_ sky130_fd_sc_hd__or4_4
+
+# Generating custom timing report
+report_checks -fields {net cap slew input_pins} -digits 4
+```
+
+Result - slack reduced
+
+![Screenshot from 2024-03-26 10-36-59](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/be71b3a4-efe1-4239-be5a-28ccebd2b7f4)
+![Screenshot from 2024-03-26 10-37-14](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/2ae759b3-f9a7-478f-a34a-3f8706347eca)
+
+Commands to verify instance `_14506_`  is replaced with `sky130_fd_sc_hd__or4_4`
+
+```tcl
+# Generating custom timing report
+report_checks -from _29043_ -to _30440_ -through _14506_
+```
+
+Screenshot of replaced instance
+
+![Screenshot from 2024-03-26 10-43-04](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/970b3cb7-fe10-4b5e-99c9-85059714f8f2)
+
+*We started ECO fixes at wns -23.9000 and now we stand at wns -22.6173 we reduced around 1.2827 ns of violation*
+
+#### 11. Replace the old netlist with the new netlist generated after timing ECO fix and implement the floorplan, placement and cts.
+
+Now to insert this updated netlist to PnR flow and we can use `write_verilog` and overwrite the synthesis netlist but before that we are going to make a copy of the old old netlist
+
+Commands to make copy of netlist
+
+```bash
+# Change from home directory to synthesis results directory
+cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/25-03_18-52/results/synthesis/
+
+# List contents of the directory
+ls
+
+# Copy and rename the netlist
+cp picorv32a.synthesis.v picorv32a.synthesis_old.v
+
+# List contents of the directory
+ls
+```
+
+Screenshot of commands run
+
+![Screenshot from 2024-03-26 10-54-15](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/90c90853-0664-44d7-8ff2-573621935870)
+
+Commands to write verilog
+
+```tcl
+# Check syntax
+help write_verilog
+
+# Overwriting current synthesis netlist
+write_verilog /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/25-03_18-52/results/synthesis/picorv32a.synthesis.v
+
+# Exit from OpenSTA since timing analysis is done
+exit
+```
+
+Screenshot of commands run
+
+![Screenshot from 2024-03-26 11-02-19](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/c6c8ce7f-5219-41bc-a5a8-47b0e1c62c7c)
+
+Verified that the netlist is overwritten by checking that instance `_14506_`  is replaced with `sky130_fd_sc_hd__or4_4`
+
+![Screenshot from 2024-03-26 11-01-25](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/1ddb66da-64cb-426d-8d78-30370c63dacb)
+
+Since we confirmed that netlist is replaced and will be loaded in PnR but since we want to follow up on the earlier 0 violation design we are continuing with the clean design to further stages
+
+Commands load the design and run necessary stages
+
+```tcl
+# Now once again we have to prep design so as to update variables
+prep -design picorv32a -tag 24-03_10-03 -overwrite
+
+# Addiitional commands to include newly added lef to openlane flow merged.lef
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+add_lefs -src $lefs
+
+# Command to set new value for SYNTH_STRATEGY
+set ::env(SYNTH_STRATEGY) "DELAY 3"
+
+# Command to set new value for SYNTH_SIZING
+set ::env(SYNTH_SIZING) 1
+
+# Now that the design is prepped and ready, we can run synthesis using following command
+run_synthesis
+
+# Follwing commands are alltogather sourced in "run_floorplan" command
+init_floorplan
+place_io
+tap_decap_or
+
+# Now we are ready to run placement
+run_placement
+
+# Incase getting error
+unset ::env(LIB_CTS)
+
+# With placement done we are now ready to run CTS
+run_cts
+```
+
+Screenshots of commands run
+
+![Screenshot from 2024-03-26 11-33-14](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/a0f223bc-3cbb-4bb1-8c7e-d800f1a4efd7)
+![Screenshot from 2024-03-26 11-33-22](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/9bd610a8-fd5e-452b-94b2-5a5fc76db5e9)
+![Screenshot from 2024-03-26 11-35-40](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/283d9b5e-fc48-45a3-8548-c68fc8966f46)
+![Screenshot from 2024-03-26 11-36-16](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/af866818-af6f-4bc4-96c0-cf3c99839003)
+![Screenshot from 2024-03-26 11-37-36](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/55aa5130-8a9f-48d6-abc8-7aace68b58c8)
+![Screenshot from 2024-03-26 11-38-26](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/755fc79a-2a77-402b-aa11-33799e31ee09)
+![Screenshot from 2024-03-26 11-39-53](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/45fdc85e-cc32-4b08-954e-bd78dcec0891)
+![Screenshot from 2024-03-26 12-00-48](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/5deb6b89-c81e-4b4d-a225-badc1f7c7299)
+
+#### 12. Post-CTS OpenROAD timing analysis.
+
+Commands to be run in OpenLANE flow to do OpenROAD timing analysis with integrated OpenSTA in OpenROAD
+
+```tcl
+# Command to run OpenROAD tool
+openroad
+
+# Reading lef file
+read_lef /openLANE_flow/designs/picorv32a/runs/24-03_10-03/tmp/merged.lef
+
+# Reading def file
+read_def /openLANE_flow/designs/picorv32a/runs/24-03_10-03/results/cts/picorv32a.cts.def
+
+# Creating an OpenROAD database to work with
+write_db pico_cts.db
+
+# Loading the created database in OpenROAD
+read_db pico_cts.db
+
+# Read netlist post CTS
+read_verilog /openLANE_flow/designs/picorv32a/runs/24-03_10-03/results/synthesis/picorv32a.synthesis_cts.v
+
+# Read library for design
+read_liberty $::env(LIB_SYNTH_COMPLETE)
+
+# Link design and library
+link_design picorv32a
+
+# Read in the custom sdc we created
+read_sdc /openLANE_flow/designs/picorv32a/src/my_base.sdc
+
+# Setting all cloks as propagated clocks
+set_propagated_clock [all_clocks]
+
+# Check syntax of 'report_checks' command
+help report_checks
+
+# Generating custom timing report
+report_checks -path_delay min_max -fields {slew trans net cap input_pins} -format full_clock_expanded -digits 4
+
+# Exit to OpenLANE flow
+exit
+```
+
+Screenshots of commands run and timing report generated
+
+![Screenshot from 2024-03-26 12-55-00](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/ee26dfa7-715a-4df7-97e7-4c6e54d16522)
+![Screenshot from 2024-03-26 12-57-40](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/e04a4dfd-000c-406b-bdaa-f5314c4eedef)
+![Screenshot from 2024-03-26 12-58-12](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/ac27d567-1b72-444d-a638-9be2db677ae2)
+![Screenshot from 2024-03-26 13-09-57](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/e63cac70-072d-4453-992e-076b94f8f1a2)
+
+#### 13. Explore post-CTS OpenROAD timing analysis by removing 'sky130_fd_sc_hd__clkbuf_1' cell from clock buffer list variable 'CTS_CLK_BUFFER_LIST'.
+
+Commands to be run in OpenLANE flow to do OpenROAD timing analysis after changing `CTS_CLK_BUFFER_LIST`
+
+```tcl
+# Checking current value of 'CTS_CLK_BUFFER_LIST'
+echo $::env(CTS_CLK_BUFFER_LIST)
+
+# Removing 'sky130_fd_sc_hd__clkbuf_1' from the list
+set ::env(CTS_CLK_BUFFER_LIST) [lreplace $::env(CTS_CLK_BUFFER_LIST) 0 0]
+
+# Checking current value of 'CTS_CLK_BUFFER_LIST'
+echo $::env(CTS_CLK_BUFFER_LIST)
+
+# Checking current value of 'CURRENT_DEF'
+echo $::env(CURRENT_DEF)
+
+# Setting def as placement def
+set ::env(CURRENT_DEF) /openLANE_flow/designs/picorv32a/runs/24-03_10-03/results/placement/picorv32a.placement.def
+
+# Run CTS again
+run_cts
+
+# Checking current value of 'CTS_CLK_BUFFER_LIST'
+echo $::env(CTS_CLK_BUFFER_LIST)
+
+# Command to run OpenROAD tool
+openroad
+
+# Reading lef file
+read_lef /openLANE_flow/designs/picorv32a/runs/24-03_10-03/tmp/merged.lef
+
+# Reading def file
+read_def /openLANE_flow/designs/picorv32a/runs/24-03_10-03/results/cts/picorv32a.cts.def
+
+# Creating an OpenROAD database to work with
+write_db pico_cts1.db
+
+# Loading the created database in OpenROAD
+read_db pico_cts.db
+
+# Read netlist post CTS
+read_verilog /openLANE_flow/designs/picorv32a/runs/24-03_10-03/results/synthesis/picorv32a.synthesis_cts.v
+
+# Read library for design
+read_liberty $::env(LIB_SYNTH_COMPLETE)
+
+# Link design and library
+link_design picorv32a
+
+# Read in the custom sdc we created
+read_sdc /openLANE_flow/designs/picorv32a/src/my_base.sdc
+
+# Setting all cloks as propagated clocks
+set_propagated_clock [all_clocks]
+
+# Generating custom timing report
+report_checks -path_delay min_max -fields {slew trans net cap input_pins} -format full_clock_expanded -digits 4
+
+# Report hold skew
+report_clock_skew -hold
+
+# Report setup skew
+report_clock_skew -setup
+
+# Exit to OpenLANE flow
+exit
+
+# Checking current value of 'CTS_CLK_BUFFER_LIST'
+echo $::env(CTS_CLK_BUFFER_LIST)
+
+# Inserting 'sky130_fd_sc_hd__clkbuf_1' to first index of list
+set ::env(CTS_CLK_BUFFER_LIST) [linsert $::env(CTS_CLK_BUFFER_LIST) 0 sky130_fd_sc_hd__clkbuf_1]
+
+# Checking current value of 'CTS_CLK_BUFFER_LIST'
+echo $::env(CTS_CLK_BUFFER_LIST)
+```
+
+Screenshots of commands run and timing report generated
+
+![Screenshot from 2024-03-26 13-42-03](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/2191f13b-ff76-4281-9d3c-52cbf12f9142)
+![Screenshot from 2024-03-26 13-45-28](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/3dcd6efe-d31a-4f72-aede-be1cdd7b078f)
+![Screenshot from 2024-03-26 13-48-01](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/2cb2c6fd-1e8c-4921-8553-7dcfb51258e5)
+![Screenshot from 2024-03-26 13-48-13](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/70353613-86f2-432c-a1d8-821083e8c209)
+![Screenshot from 2024-03-26 13-50-12](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/bf6c116b-e31c-4dce-b04f-a75430b1d03b)
+![Screenshot from 2024-03-26 13-53-30](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/a26e9d23-d448-4512-8676-8a2b3fb22572)
 
 ## Section 5 -  (18/03/2024)
 
