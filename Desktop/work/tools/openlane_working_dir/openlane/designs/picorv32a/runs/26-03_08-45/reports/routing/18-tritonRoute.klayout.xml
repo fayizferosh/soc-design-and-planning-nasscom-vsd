@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<report-database>
+    <categories/>
+    <cells>
+        <cell>
+            <name>picorv32a</name>
+        </cell>
+    </cells>
+    <items/>
+</report-database>
