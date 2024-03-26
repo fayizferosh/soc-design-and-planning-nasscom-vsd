@@ -1,0 +1,25 @@
+[INFO]: Current run directory is /openLANE_flow/designs/picorv32a/runs/25-03_18-52
+[INFO]: Preparing LEF Files
+[INFO]: Extracting the number of available metal layers from /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd.tlef
+[INFO]: The number of available metal layers is 6
+[INFO]: The available metal layers are li1 met1 met2 met3 met4 met5
+[INFO]: Merging LEF Files...
+[INFO]: Merging the following extra LEFs: /openLANE_flow/designs/picorv32a/src/sky130_vsdinv.lef
+[INFO]: Trimming Liberty...
+[INFO]: Generating Exclude List...
+[INFO]: Storing configs into config.tcl ...
+[INFO]: Preparation complete
+[INFO]: Merging /openLANE_flow/designs/picorv32a/src/sky130_vsdinv.lef
+[INFO]: Running Synthesis...
+[INFO]: current step index: 3
+[INFO]: Changing netlist from /openLANE_flow/designs/picorv32a/runs/25-03_18-52/results/synthesis/picorv32a.synthesis.v to /openLANE_flow/designs/picorv32a/runs/25-03_18-52/results/synthesis/picorv32a.synthesis.v
+[INFO]: Running Static Timing Analysis...
+[INFO]: current step index: 4
+[INFO]: Synthesis was successful
+[INFO]: Using design configuration at /openLANE_flow/designs/picorv32a/config.tcl
+[INFO]: Sourcing Configurations from /openLANE_flow/designs/picorv32a/config.tcl
+[INFO]: PDKs root directory: /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks
+[INFO]: PDK: sky130A
+[INFO]: Setting PDKPATH to /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A
+[INFO]: Standard Cell Library: sky130_fd_sc_hd
+[INFO]: Sourcing Configurations from /openLANE_flow/designs/picorv32a/config.tcl
