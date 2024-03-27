@@ -400,7 +400,7 @@ exit
 exit
 ```
 
-## Section 3 - Design library cell using Magic Layout and ngspice characterization (16/03/2024 - 21/03/2024)
+## Section 3 - Design library cell using Magic Layout and ngspice characterization (18/03/2024 - 21/03/2024)
 
 ### Theory
 
