@@ -1747,3 +1747,13 @@ Screenshots of commands run and timing report generated
 ![Screenshot from 2024-03-26 23-17-09](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/5cac9ce5-420a-4eaa-b5f4-09286701e550)
 ![Screenshot from 2024-03-26 23-17-32](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/7d809f14-66b6-4dd6-8161-2ad8371cfaf9)
 ![Screenshot from 2024-03-26 23-17-56](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/64ccb1d8-74aa-42b0-88d4-a0f9588d2ca2)
+
+# Certificate
+
+![Digital-VLSI-SoC-Design-and-Planning-Certificate](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/6f292f50-f95b-471c-8dac-bf0ea7345c9b)
+
+# Acknowledgements
+
+* [Kunal Ghosh](https://github.com/kunalg123), Co-founder, VSD Corp. Pvt. Ltd.
+* [Nickson P Jose](https://github.com/nickson-jose), Physical Design Engineer, Intel Corporation.
+* [R. Timothy Edwards](https://github.com/RTimothyEdwards), Senior Vice President of Analog and Design, efabless Corporation.
